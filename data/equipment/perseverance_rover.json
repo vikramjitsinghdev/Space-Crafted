@@ -1,0 +1,23 @@
+{
+    "name": "Perseverance rover",
+    "description": null,
+    "length_m": null,
+    "width_m": null,
+    "height_m": null,
+    "volume_m3": null,
+    "mass_kg": null,
+    "diameter_m": null,
+    "footprint_m2": null,
+    "power_w": null,
+    "voltage_v": null,
+    "operating_temperature_min_c": null,
+    "operating_temperature_max_c": null,
+    "material": null,
+    "manufacturer": null,
+    "mission": null,
+    "subsystem": null,
+    "source_url": null,
+    "source_title": null,
+    "additional_specs": null,
+    "ai_extracted": false
+}
