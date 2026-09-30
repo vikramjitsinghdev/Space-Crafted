@@ -1,0 +1,1753 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 
+
+ 
+
+Mars Science Helicopter: Conceptual Design of the 
+
+Next Generation of Mars Rotorcraft 
+
+Shannah Withrow-Maser1   
+
+Wayne Johnson2 
+
+Larry Young 3 
+
+Witold Koning4 
+
+Winnie Kuang4 
+
+Carlos Malpica4  
+Ames Research Center, Moffett Field, CA, 94035 
+
+J. Balaram5 
+
+Theodore Tzanetos5 
+
+Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, 91109 
+
+Robotic planetary aerial vehicles increase the range of terrain that can be examined, 
+
+compared to traditional landers and rovers, and have more near-surface capability than 
+
+orbiters. Aerial mobility is a promising possibility for planetary exploration as it reduces the 
+
+challenges that difficult obstacles pose to ground vehicles. The first use of a rotorcraft for a 
+
+planetary mission will be in 2021, when the Ingenuity Mars helicopter technology 
+
+demonstrator will be deployed via the Perseverance rover. NASA’s Jet Propulsion Laboratory 
+
+and NASA Ames Research Center are exploring possibilities for a Mars Science Helicopter, a 
+
+second-generation Mars rotorcraft with the capability of conducting science investigations 
+
+independently of a lander or rover (although this type of vehicle could also be used to assist 
+
+rovers or landers in future missions). Two, large rotorcraft configurations are described: a 
+
+hexacopter and a co-axial helicopter with a payload in the range of two to three kilograms and 
+
+an overall vehicle mass of approximately twenty kilograms. Additionally, advancements in 
+
+technology over the course of the study are applied to a rotorcraft of the same size and form 
+
+as Ingenuity. Initial estimates of weight and performance were based on the capabilities of 
+
+Ingenuity. Rotorcraft designs for Mars are constrained by the dimensions of the aeroshell and 
+
+lander for the trip to the planet, constraining maximum rotor dimensions and, hence, overall 
+
+performance potential. The effects of airfoils designed specifically for the low Reynolds 
+
+number and high Mach number inherent to operation on Mars were studied. Rotor structural 
+
+designs were developed that met blade frequency and weight targets, subject to material stress 
+
+limits. The final designs are representative of the vehicle configurations required for a large 
+
+range of future missions and will require relatively minor adaptations once science tasks are 
+
+chosen. These designs will be compared to Ingenuity to demonstrate technology advancements 
+
+developed during the study. 
+
+  
+
+                                                           
+1 Member; Aeromechanics Office, NASA Ames Research Center, Moffett Field, CA.  
+2 Fellow; Aeromechanics Office, NASA Ames Research Center, Moffett Field, CA. 
+3 Associate Fellow; Aeromechanics Office, NASA Ames Research Center, Moffett Field, CA. 
+4Aeromechanics Office, NASA Ames Research Center, Moffett Field, CA. 
+5Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA.  
+
+ 
+
+
+
+2 
+
+ 
+
+I. Nomenclature  
+
+a = speed of sound  
+
+c = section chord 
+
+cd = drag coefficient, 𝑐𝑑 = 𝐷/(
+1
+
+2
+𝜌𝑉2𝑐) 
+
+cl =    lift coefficient, 𝑐𝑙 = 𝐿/(
+1
+
+2
+𝜌𝑉2𝑐)  
+
+CT/ σ =    blade loading coefficient  
+
+Cy = force coefficient in the y direction 
+
+D = section drag  
+
+E = modulus of elasticity 
+
+L = section lift  
+
+Fx = X component of the resultant pressure force acting on the vehicle 
+
+Fy = Y component of the resultant pressure force acting on the vehicle 
+
+M = Mach, 𝑀 = 𝑉/𝑎 
+R = radius 
+
+Re = Reynolds number 
+
+T = temperature   
+
+V = velocity  
+
+Vtip = tip speed 
+
+α = angle-of-attack  
+
+ρ = density 
+
+σ = solidity 
+
+μ = viscosity 
+
+II. Introduction 
+
+Ingenuity, the helicopter launching as a part of the Mars 2020 mission alongside the rover Perseverance, will 
+
+begin a new era of planetary exploration. Mars research has historically been conducted through landers, rovers, 
+
+satellites, and Earth-based telescopes. As both government and private industries prepare for human exploration of 
+
+the Martian surface within two decades, more in-depth knowledge of what awaits on the surface is critical. Planetary 
+
+aerial vehicles increase the range of terrain that can be examined, compared to traditional landers and rovers, and have 
+
+more near-surface capability than orbiters. The Jet Propulsion Laboratory (JPL) and NASA Ames Research Center 
+
+are exploring possibilities for a Mars Science Helicopter (Ref. 1), a second-generation Mars rotorcraft with the 
+
+capability of conducting science investigations independently of a lander or rover (although this type of vehicle could 
+
+also be used assist rovers or landers in future missions). JPL is leading this exploration, while NASA Ames is 
+
+responsible for the aircraft sizing and packaging, rotor design, and mission performance analysis. The University of 
+
+Maryland contributed the rotor structural design and analysis. The results will also provide baseline designs for future 
+
+helicopters on Mars. 
+
+The first use of a rotorcraft for a planetary mission will be in 2021, when Ingenuity will be deployed from 
+
+Perseverance (Ref. 2). The goal of the Ingenuity (Figure 1) is to demonstrate the viability and potential of heavier -
+
+than-air flying vehicles in the Martian atmosphere. Ingenuity is a coaxial helicopter with a mass of 1.8 kg and rotor 
+
+diameter of 1.21 m. The helicopter relies on solar cells and a battery system for power, allowing up to 90 second flight 
+
+endurance that must be conducted fully autonomously due to the minutes-long communication delay between Earth 
+
+and Mars. Ingenuity will perform five ninety-second flights as a technology demonstration of the first powered flight 
+
+on another planet.  
+
+The Mars Science Helicopter (MSH) investigation has the goal of establishing the feasibility of flying a larger, 
+
+more capable rotorcraft on Mars. Ingenuity does not have a dedicated science payload apart from the instruments 
+
+required for flight, and Ingenuity flights will take place over relatively flat, rock-free terrain using a visual-inertial 
+
+navigation system. The MSH was designed to be capable of more payload, longer sorties, all terrain overflight, and 
+
+communication through an orbiter to enable operation at unrestricted distances from other landed assets. Initial design 
+
+requirements for the MSH mission include a two to three kilogram payload (such as could be used for onboard science 
+
+instruments intended for mapping, stratigraphy, remote sensing, etc.), an extended range (2–4 km) and increased hover 
+
+time (2–4 minutes) sufficient to enable significant science investigations both inflight as well as when on the surface. 
+
+The aircraft design target mass to accomplish such science missions is around 20 kg. The MSH vehicle will require 
+
+improved handling qualities for control, more efficient rotor blade performance, and optimized lightweight structural 
+
+
+
+3 
+
+ 
+
+design in order to be successful. This report describes the conceptual design of Mars Science Helicopters. The goal of 
+
+the vehicle design work is to establish the general capability of helicopters for science operations on Mars. The work 
+
+in this report was expanded on in Ref. 3.  
+
+ 
+Fig. 1. Ingenuity, part of the Mars 2020 mission (Photo credit: JPL archives).  
+
+III. Background 
+
+Early work on aerial exploration of planetary bodies was performed by Young and Aiken, et al. (Refs. 4-7). In 
+
+response to a 2002 American Helicopter Society student design competition (sponsored by NASA and Sikorsky 
+
+Aircraft), Martian rotorcraft designs were developed by University of Maryland (Ref. 8) and Georgia Institute of 
+
+Technology (Ref. 9). The University of Maryland aircraft, MARV, was designed for a weight of 50 kg with a rotor 
+
+diameter of 4.26 m, range of 25 km, and endurance of 39 min. GTMARS, the Georgia Institute of Technology design, 
+
+weighed 10 kg with a rotor diameter of 1.84 m and endurance of 30 min. More recent designs for Martian rotorcraft 
+
+were developed by Georgia Institute of Technology (MEUAV, Ref. 10), Delft University of Technology (VITAS, 
+
+Ref. 11), and Tohoku University (JMH, Ref. 12). Figure 2 illustrates these designs. 
+
+ 
+
+Fig. 2. Martian rotorcraft designs (left to right): MARV, GTMARS, MEUAV, VITAS, and JMH. 
+
+The development of the Ingenuity was led by the Jet Propulsion Laboratory. Balaram, et al. (Ref. 1) described the 
+
+Mars Helicopter (now known as Ingenuity) project; Grip, et al. (Refs. 13-15) described Ingenuity’s flight dynamics, 
+
+control, and guidance; Pipenberg, et al. (Refs. 16-17) described the rotor and aircraft design and fabrication. Koning, 
+
+et al. (Ref. 18) presented performance calculations for Ingenuity. Ingenuity is the only aircraft constructed and tested 
+
+for flight on Mars (though actual flights on Mars will not occur until 2021), so the Ingenuity weights and performance 
+
+were the foundation of conceptual design of Mars Science Helicopters. 
+
+Balaram (Ref. 1) described potential Mars Science Helicopter missions. The MSH will be able to explore extreme 
+
+terrains that a rover or lander could not access. For example, it can overcome and hover next to steep slopes, fly over 
+
+rocky ground, and otherwise observe hazardous terrains that would be inaccessible to a rover. Visible imaging from a 
+
+helicopter would bridge the resolution gap between orbital images and landed investigations. Possible scientific areas 
+
+of study that would be enabled by these technical capabilities include (but are not limited to) the following:  
+
+Mapping/Stratigraphy: A helicopter would be able to access regional geology in three dimensions, 
+
+making it very capable for a mapping and stratigraphy investigation. Layered deposits, for example, 
+
+could be imaged and sampled through their depths across tens to hundreds of kilometers.  
+
+Polar Science: An aerial vehicle could conduct detailed mapping of ice-rich layers exposed at the 
+
+poles (e.g., polar troughs). These layers are thought to reflect changes in climate over long periods 
+
+of time. Steep, cliff-like terrain along the periphery of the polar layered deposits is another candidate 
+
+site that would benefit from exploration of a Mars helicopter.  
+
+
+
+4 
+
+ 
+
+Recurring Slope Lineae: RSL are special regions that are difficult to explore without danger of 
+
+contamination. However, a helicopter could fly or hover over RSL without touching them. Spectral 
+
+properties, daily changes and the timing of appearance and fading behaviors, and nearby moisture 
+
+and wind content could all reveal the true nature of these enigmatic features.  
+
+Low-Latitude Volatiles (icy scarps): An aerial platform could conduct along-scarp mapping of ice-
+
+rich layers comprising an ancient ice sheet, now exposed at the surface. In addition to characterizing 
+
+icy layers, the vehicle could also study ice sheet overburden and the erosional products at the base 
+
+of the scarp.  
+
+Atmospheric Science: Vertical profiles could be acquired for atmospheric species of interest (e.g., 
+
+H2O, CO2, CH4) in the lowest region of the boundary layer, which are difficult to obtain from orbit. 
+
+Vertical changes in wind speed could also be measured. These measurements are crucial for 
+
+understanding interaction between the surface and the atmosphere.  
+
+Subsurface Geophysics: Geophysical studies of Mars are especially timely given the new 
+
+information the InSight mission is revealing about the interior of Mars. The subsurface could be 
+
+explored in detail over a wide area using the capabilities of a helicopter.  
+
+By providing a new platform for regional high-resolution sensing and extreme terrain access, Mars helicopters 
+
+will enable new mission concepts responsive to the strategic themes of life (access to RSL), geology (access to diverse 
+
+sites and extreme terrains), climate (direct observation of low-altitude wind fields), and help to prepare for human 
+
+exploration (demonstrating helicopter scouting concepts). 
+
+IV. Rotorcraft Design Tools and Process 
+
+The initial designs were sized using NASA Design and Analysis of Rotorcraft (NDARC) software, followed by 
+
+performance analysis using CAMRAD II. CAMRAD II is an aeromechanics analysis of rotorcraft that incorporates 
+
+multibody dynamics, nonlinear finite elements, and rotorcraft aerodynamics. NDARC and CAMRAD II theory and 
+
+application are described in Refs. 19-22.  
+
+Aircraft structural design and analysis were conducted using SolidWorks, a 3D Computer Aided Design (CAD) 
+
+software from Dassault Systèmes. NASA STRuctural Analysis (NASTRAN) will be used for more complex, 
+
+composite structural analysis. SolidWorks was also used for the packaging investigations. 
+
+The rotor blade structural design and analysis were conducted using the three-dimensional multi-body structural 
+
+dynamics code X3D (Ref. 23), from US Army Aviation Development Directorate and the University of Maryland. 
+
+The geometry for the X3D models was constructed using CATIA, a 3D CAD and project life cyclic management 
+
+system from Dassault Systèmes. Structural analysis meshes were defined using CUBIT, from Sandia National 
+
+Laboratories. 
+
+Airfoil design, analysis, and optimization were conducted using the Reynolds-averaged Navier-Stokes 
+
+computational fluid dynamics code OVERFLOW from NASA (Ref. 24). The analysis used two-dimensional 
+
+structured grids, with the implicit, compressible solver of OVERFLOW, to evaluate airfoil section lift and drag. 
+
+Flight dynamics modeling and assessment is currently on-going for the rotorcraft described using FlightCODE to 
+
+generate a bare airframe model and CONDUIT to assist in gain tuning. This process is described in Ref. 25.  
+
+ The helicopter design process begins with the definition of the mission, particularly payload, range, and hover 
+
+time. The fundamental requirement for a reliable conceptual design of an aircraft is a complete identification of all the 
+
+components and subsystems that make up the vehicle. Then for each component, weight and performance models are 
+
+needed. The weight models reflect scaling with size of the component. The performance models in particular are 
+
+needed for rotor hover and forward flight operation. These weight and performance models are calibrated to existing 
+
+aircraft, which in the case of flight on Mars is only Ingenuity. The power system needs models for motor and battery 
+
+performance. Power requirements of the payload must also be specified. 
+
+To start the sizing of the Mars Science Helicopter, a spreadsheet was developed, and it was calibrated to the 
+
+weight and power of Ingenuity. With a preliminary examination of packaging and folding options for a rotorcraft in 
+
+an aeroshell, the spreadsheet sizing tool produced initial estimates of the designs. Next, NDARC models were 
+
+developed, with detailed performance models for the rotor, battery, and motor, and detailed mission analysis. The 
+
+weight models began in a form similar to the spreadsheet. CAMRAD II was used to determine blade planform and 
+
+
+
+5 
+
+ 
+
+twist to optimize the rotor performance, and then used to generate rotor performance models for NDARC. The battery 
+
+model was calibrated to the specification data for a Li-ion cell. A simple motor efficiency model was used. The 
+
+conceptual design process iterates between the sizing task and the rotor performance and structural analysis. 
+
+V. Mission Definition and Configurations  
+
+In order to determine the proper configuration, a baseline mission must be defined. The JPL-defined mission for 
+
+mapping, stratigraphy, and remote sensing operations with a payload of 2.02 kg that was used for sizing is listed below 
+
+in segments:  
+
+ 
+
+a) 30 sec takeoff at hover power 
+
+b) climb to altitude of 200 m 
+
+c) 1 km cruise flight to science site 
+
+d) 2 min hover at science site 
+
+e) land 
+
+f) sleep for 1 sol, and recharge 
+
+The operation site chosen for design and analysis of the MSH was the Jezero Crater in the spring, for which the 
+
+typical atmospheric conditions are a density of 0.015 kg/m3 and temperature of –50o C. 
+
+ 
+
+Fig. 3. Mars Science Helicopter design mission. 
+
+This mission was intended to be representative of a useful scientific endeavor on Mars, without being so 
+
+challenging that it was beyond projected technology. After designing a helicopter for this mission, the possibilities for 
+
+expanded capabilities were explored. 
+
+Two aircraft configurations were considered for the Mars Science Helicopter, illustrated in Figure 4. The coaxial 
+
+helicopter has the advantage of directly inheriting experience from the Mars Helicopter development and testing, but 
+
+has potential problems with destabilization associated with blade flapping dynamics. The hexacopter has better 
+
+performance (due to lower disk loading) and flight dynamics characteristics, and it could operate with power out to 
+
+one or two rotors, but it is expected to have larger airframe weight. 
+
+ 
+
+Fig. 4. Mars Science Helicopter configurations, with Mars Helicopter (center) for scale. 
+
+As stated above, to start the sizing of the Mars Science Helicopter, a spreadsheet was developed, and calibrated 
+
+to the weight and power of the Mars Helicopter. The spreadsheet implemented simple models for rotor performance, 
+
+motor and battery efficiency, and component weights. The spreadsheet sizing gave an aircraft gross weight of about 
+
+20 kg, and a rotor diameter of 2.5–2.7 m for the coaxial helicopter or 1.0–1.4 m for the hexacopter (compared to 1.8 
+
+kg and 1.21 m for Ingenuity). 
+
+Planetary vehicle, including aircraft, size will always be constrained by packaging for the trip to the destination. 
+
+For this initial sizing effort, the legacy Pathfinder aeroshell was considered, notably imposing a maximum diameter 
+
+Climb to 
+
+200m
+
+Cruise 
+
+(1 km) 
+
+Takeoff
+
+(30 s) 
+
+Hover 
+
+(2 min)
+
+Landing Site Science Site 
+
+Land 
+
+Sleep and Recharge 
+
+
+
+6 
+
+ 
+
+of 2.5 m for the aircraft when folded/packaged in the aeroshell prior to deployment on the Martian surface. It was 
+
+assumed that the problems of landing and extraction are solvable and most of the volume within the aeroshell is 
+
+potentially usable. The aircraft considered for more detailed and accurate analysis were the coaxial helicopter with 
+
+droop fold and rotor radius of 1.25 m, and the hexacopter with rotating fold and rotor radius of 0.64 m. The initial 
+
+estimates of weight and power for these two aircraft were similar, but the hexacopter had 57% more disk area than the 
+
+coaxial helicopter, which was expected to result in a more efficient aircraft. 
+
+ 
+
+Fig. 5. Droop fold (co-axial) on left and rotating arm fold (hex) on right.  
+
+ More detailed studies considered the volumetric implications of not only fitting MSH vehicles inside the aeroshell 
+
+but also fitting within the original Pathfinder airbag tetrahedral petal lander. Details of the studies can be found in Ref. 
+
+3. The final configurations that allowed for maximum radius of 0.50-0.58 m, using the heritage Pathfinder lander are 
+
+below in Figure 6 and 7. The “Layered B” configuration had a larger radius, hence better performance, but “scissoring” 
+
+the blades added considerable complexity. Both designs left volume unoccupied in the lander, available for other 
+
+payload, either associated with the helicopter (perhaps swappable payloads) or separate science applications. 
+
+Nonetheless, feasible design approaches for an MSH hexacopter that fit in the Pathfinder lander have been identified. 
+
+ 
+
+ 
+
+Fig. 6. Hexacopter for the Pathfinder lander, folding arms (Layered A design). 
+
+ 
+
+Fig. 7. Hexacopter for the Pathfinder lander, folding arms and scissored blades (Layered B design). 
+
+hinged armsrotating arms
+
+
+
+7 
+
+ 
+
+Table 1. Comparison of MSH hexacopter designs for the Pathfinder lander. 
+
+Configuration Layered A Layered B Rotating 
+
+Radius (m)  0.50 0.58 0.64 
+
+Solidity  0.25 0.176 0.142 
+
+Mean chord (m)  0.1029 0.0837 0.0746 
+
+Aspect Ratio 4.9 6.9 8.6 
+
+Weight (kg)  19.06 17.99 15.66 
+
+Power (kW)  3.51 2.87 2.80 
+
+Energy (MJ)  2.37 1.98 1.82 
+
+Remaining volume in lander (m3) 0.168 0.215  
+
+ 
+
+The conclusion of the initial sizing and packaging effort was that there are feasible rotorcraft that can perform the 
+
+MSH design mission, although with relatively high disk loading and solidity because of the aeroshell constraint on 
+
+folded size. In general, using a larger aeroshell would enable a larger and more capable rotorcraft. In particular, when 
+
+the complete EDL (entry, descent, and landing) solution is considered, especially the lander, either a less capable 
+
+aircraft or a larger aeroshell may well be required. However, this conclusion should not overshadow the significance 
+
+that the EDL system, not the vehicle, is the constraining factor for rotorcraft performance in this size range. Apart 
+
+from the EDL system, controllability is likely to form an upper bound for sizing until improvements in lightweight 
+
+damping materials/mechanisms are made. Controllability analysis of these configurations is on-going at NASA Ames, 
+
+but it is hypothesized that the multirotor configuration, in particular, could perform even more demanding missions 
+
+that it was originally sized for without running into these limits, especially if rotor radius is less constrained.  
+
+VI. Rotor Design  
+
+The fundamentals of rotor and rotorcraft performance are presented in Ref. 26. Evaluating aerodynamic 
+
+performance of a rotary wing starts with the lift and drag behavior of the airfoil sections. From lift and drag of the 
+
+sections, the thrust and power of the rotor can be calculated. The lift coefficient,𝑐𝑙, and drag coefficient, 𝑐𝑑, are the 
+scaled characteristics of the section. The coefficients vary with the airfoil section angle-of-attack, 𝛼 (Figure 8). The 
+effects of viscosity are characterized by the Reynolds number, and the effects of compressibility are characterized by 
+
+the Mach number. Figure 8 shows the lift and drag coefficients as a function of angle-of-attack for several Mach 
+
+numbers, for an NACA 23012 airfoil at Re typical of a helicopter on Earth. For low angle-of-attack, the lift is linear 
+
+with 𝛼 and the drag is small. At a given angle of attack (here about 12 deg for 𝑀 = 0.4) the flow separates from the 
+airfoil upper surface (the airfoil stalls), which causes the lift to decrease and the drag to increase. As Mach number 
+
+increases, the lift-curve-slope increases below stall, but the maximum lift decreases. At high Mach numbers, shocks 
+
+occur on the airfoil, and the drag rises substantially. At the very small Reynolds numbers (Re) characteristic of flight 
+
+on Mars, the maximum lift is smaller than shown in Figure 8, and the drag is greatly increased, by a factor of 4 or 5, 
+
+even at low angle-of-attack. The best airfoils at low Re (which have the highest lift-to-drag ratio) are thin, and 
+
+compressibility effects are delayed for thin sections. 
+
+ 
+
+
+
+8 
+
+ 
+
+ 
+
+Fig. 8. Airfoil lift and drag characteristics (NACA 23012) on Earth. 
+
+Low Re design and analysis are required for Martian rotors, opposed to traditional design and analysis at higher 
+
+Re conditions, because the air is much less dense on Mars than on Earth. The density on Mars is approximately 1% 
+
+of that on Earth with a variation between 0.010 and 0.020 kg/m3 (depending on ground elevation, as well as yearly 
+
+and daily variations). Because of the low density, the Re of airfoils on rotors designed for Martian operations are in 
+
+the range 10000 to 25000, which has a significant impact on airfoil behavior. The Martian atmosphere consists 
+
+primarily of carbon dioxide. The gas properties of carbon dioxide and the low temperatures in the Mars atmosphere 
+
+lead to a lower speed of sound compared to the atmosphere of Earth. 
+
+The low density of the atmosphere on Mars reduces the lift that can be produced by a rotor. The low Re reduces 
+
+the maximum lift coefficient and increases the drag coefficient of airfoils, and the optimum airfoil shape is much 
+
+different than that for high Re. For a given design Mach number, the lower speed of sound on Mars reduces the 
+
+maximum possible tip speed of the rotor. 
+
+Table 2. Atmospheric properties on Earth and on Mars. 
+
+  Earth (N2+O2) Mars (CO2) 
+
+Density, 𝜌 kg/m3 1.225 0.017 
+
+Temperature, 𝑇 C 15 –50 
+
+Viscosity, 𝜇 Ns/m2 0.0000175 0.0000113 
+
+Sound speed, 𝑎 m/s 340.3 233.1 
+
+Tip speed, 𝑉𝑡𝑖𝑝 
+(Mach number = 0.7) 
+
+m/s 238 163 
+
+Reynolds number, 𝑅𝑒 
+(Mach number = 0.5, chord = 0.1 m) 
+
+1,297,000 19,100 
+
+ 
+
+The rotor operating environment within Mars atmosphere is characterized by low Reynolds number, about 𝑅𝑒 =
+11000 for Ingenuity and 𝑅𝑒 = 15000 − 25000 for MSH, and high Mach number, 𝑀 = 0.7 to 0.9 at the blade tip. 
+There is virtually no experimental data for airfoils at such low Re and high Mach number, so the airfoil section 
+
+characteristics were calculated using OVERFLOW. These characteristics are the lift, drag, and moment coefficients 
+
+as a function of angle-of-attack and Mach numbers for each Reynolds number and radial station. 
+
+Ingenuity’s rotor blade was designed by AeroVironment, as described in Refs. 16-17. The airfoil section for the 
+
+outboard half of the blade is the CLF5605, which was based on a series of AeroVironment airfoils designed for high 
+
+altitude propellers with the camber line and thickness modified to operate at higher lift coefficients and to increase the 
+
+spar depth. Koning, et al. (Refs. 27, 28, 18) summarized the information available to support selection of airfoils for 
+
+a future Mars helicopter. The low chord-based Re of the Ingenuity rotor results in relatively poor lift-to-drag ratios. 
+
+Below approximately Re = 100000, the boundary-layer state can be subcritical. The flow is called subcritical if the 
+
+boundary-layer of a streamlined shape is laminar for the range of angles-of-attack.  
+
+0.0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+
+1.2
+
+1.4
+
+1.6
+
+-2 0 2 4 6 8 10 12 14 16
+
+li
+ft
+
+ c
+o
+
+e
+ff
+
+ic
+ie
+
+n
+t
+
+angle of attack (deg)
+
+M=0.4
+
+M=0.7
+
+M=0.85
+
+0.00
+
+0.05
+
+0.10
+
+0.15
+
+0.20
+
+0.25
+
+0.30
+
+-2 0 2 4 6 8 10 12 14 16
+
+d
+ra
+
+g
+ c
+
+o
+e
+
+ff
+ic
+
+ie
+n
+
+t
+
+angle of attack (deg)
+
+M=0.4
+
+M=0.7
+
+M=0.85
+
+
+
+9 
+
+ 
+
+Flat plates, especially with sharp leading edges, behave differently at low Re than conventional airfoils (Refs. 27, 
+
+28, 18). Below the critical Reynolds number, flat and cambered plates can outperform smooth airfoils with rounded 
+
+leading edges. Hoerner (Ref. 29) compares the performance of a flat plate and an airfoil crossing the critical Reynolds 
+
+number transition region, Figure 9. The flat plates in the comparison have a thickness ratio of 3.0%. A low thickness 
+
+ratio has a beneficial effect on the drag coefficient. The sharper the leading edge, the earlier transition starts. For all 
+
+positive angles of attack, the stagnation point moves downstream on the lower surface, creating a turbulent edge, 
+
+essentially forcing supercritical behavior up to low Re. A sharp-leading-edge flat plate will, therefore, not exhibit a 
+
+critical Reynolds number because the point of breakaway is fixed. 
+
+ 
+Fig. 9. Variation of airfoil section maximum lift-to-drag ratio and minimum drag coefficient with chord 
+
+Reynolds number (Ref. 18, 30). 
+
+Koning, Romander, and Johnson (Ref. 31, 32) optimize unconventional airfoil shapes with sharp leading edges 
+
+at representative Reynolds-Mach combinations for the MSH. At lower Re, the sharp leading edge creates an immediate 
+
+separation location resulting in a separated shear layer that is susceptible to inviscid instabilities (such as the Kelvin-
+
+Helmholtz instability) and ultimately causes breakdown to vortex shedding over the upper surface of the airfoil. At 
+
+low enough Re, in absence of laminar-turbulent transition in the separated shear layer (or further downstream), these 
+
+instabilities and resulting vortex shedding can provide the required mixing to avoid laminar flow separation or 
+
+complete stall. Neither the trailing edge shape nor free-stream turbulence levels seem to impact cambered flat plate 
+
+performance to any significant extent. No hysteresis occurs for thin flat plates, compared to that observed for thicker 
+
+airfoils, because the nose turbulence and/or laminar instabilities increase faster than the pressure increase. Camber 
+
+usually has a positive effect on plate performance because of the low incidence angle between the free-stream and the 
+
+camber line at the leading edge. The instabilities generated by the sharp leading edge and the concave underside both 
+
+aid in lift generation, while sufficiently small upper surface camber allows largely attached flow. 
+
+Table 3 summarizes the factors influencing the choice of airfoils for a helicopter operating at the Re encountered 
+
+near the Martian surface. 
+
+
+
+10 
+
+ 
+
+Table 3. Overview of airfoil behavior at low Reynolds number (Ref. 28). 
+
+Airfoil geometry Sensitivity to Re 
+
+and FST 
+
+Hysteresis with 
+
+condition 
+
+Demonstrated 
+
+concept 
+
+Comments 
+
+Conventional 
+
+airfoil 
+
+Large sensitivity 
+
+possible 
+
+Hysteresis 
+
+possible (LSB 
+
+induced) 
+
+If outside critical 
+
+Re region; used 
+
+for small 
+
+unmanned aerial 
+
+vehicles (UAVs) 
+
+Can work reliably if 
+
+Reynolds number is too low 
+
+for boundary layer transition 
+
+throughout operational 
+
+regime (as for Ingenuity) 
+
+Tripped airfoil, 
+
+rough airfoil 
+
+If transition is 
+
+fixed, sensitivity is 
+
+minimized 
+
+Hysteresis 
+
+possible if bubble 
+
+occurs before trip 
+
+Difficult to ensure 
+
+trip works below 
+
+Re=30,000; 
+
+uncertain at 
+
+higher Re 
+
+Transition needs to be 
+
+guaranteed for all 
+
+conditions, otherwise 
+
+unpredictable flight 
+
+dynamics can ensue 
+
+Cambered plate, 
+
+curved plate 
+
+Leading-edge 
+
+separation of large 
+
+angle-of-attack 
+
+range reduces 
+
+sensitivity 
+
+Hysteresis less 
+
+likely because 
+
+most operating 
+
+conditions have 
+
+leading-edge 
+
+separation 
+
+Used for many 
+
+small UAVs or 
+
+micro aerial 
+
+vehicles (MAVs) 
+
+Possible stiffness issues due 
+
+to low thickness-to-chord 
+
+ratio 
+
+Corrugated airfoil Separation at 
+
+corrugation 
+
+features likely to 
+
+reduce sensitivity 
+
+Hysteresis less 
+
+likely because of 
+
+separation at 
+
+corrugation 
+
+features 
+
+No known rotary-
+
+wing experiments 
+
+using corrugated 
+
+airfoils 
+
+Performance only 
+
+competitive at lower 
+
+Re<10,000 
+
+Polygonal airfoil Separation at 
+
+corrugation 
+
+features likely to 
+
+reduce sensitivity 
+
+Hysteresis less 
+
+likely because of 
+
+separation 
+
+No known rotary-
+
+wing experiments 
+
+using polygonal 
+
+airfoils 
+
+Possible mediation of 
+
+stiffness issues due to 
+
+increased thickness-to-chord 
+
+ratio 
+
+Re = Reynolds number, FST = freestream turbulence, LSB = laminar separation bubble 
+
+The cambered plate was used as a starting point for the new rotor design. Planform taper and blade twist were 
+
+varied to minimize the rotor power required at the design conditions, keeping the blade thrust-weighted solidity 
+
+constant. A square tip is needed so the tip vortex forms at the blade tip (not inboard), which gives the best hover 
+
+performance. The root cutout was 9%R. For a low Reynolds number, high-solidity rotor, the performance was not 
+
+very sensitive to blade taper. Overall taper ratios from 0.5 to 1.0 were considered. Reduced chord was considered for 
+
+the root (negative taper, to 0.25R) to reduce weight, since inboard chord is not very important for performance. 
+
+Additional taper was considered at the tip (outboard of 0.75R). The optimum linear taper was 𝑐𝑡𝑖𝑝/𝑐𝑟𝑜𝑜𝑡 = 0.85, with 
+
+more taper at the tip (0.43) and reduced chord at the root. This design was used for structural analysis described below. 
+
+Figure 10 shows the planforms for the coaxial helicopter blade and the hexacopter blade. As solidity changed during 
+
+the design process, the chord was scaled keeping the taper ratios constant. The fully optimized airfoils used for the 
+
+MSH design are described Ref. 31 and 32.  
+
+Large negative twist is good for hover and low speed rotor performance. Twist values from –12 to –24 deg (linear, 
+
+root to tip) were considered, including different inboard and outboard twists. The optimum was found to be –18 deg 
+
+linear twist. 
+
+The rotor performance was calculated for this optimum blade (airfoil, twist, and planform) with CAMRAD II, 
+
+and the results were used to calibrate the NDARC rotor performance model. Figure 11 shows the NDARC results for 
+
+the rotor power required of the Mars Science Helicopter. The larger total rotor disk area of the hexacopter led to lower 
+
+power required compared to the coaxial helicopter. The minimum power speed was about 30 m/sec (best endurance 
+
+speed), where the best range speed was 50–60 m/sec. The corresponding aircraft hover figure of merit was 𝐹𝑀 = 
+0.675 for the coaxial helicopter, and 𝐹𝑀 = 0.615 for the hexacopter.  
+
+
+
+11 
+
+ 
+
+ 
+
+ 
+
+Fig. 10. Mars Science Helicopter blade planform for four-bladed coaxial helicopter (radius = 1.25 m, solidity 
+
+= 0.155) and four-bladed hexacopter (radius = 0.64 m, solidity = 0.193). Y-axis in meters. The root cutout (not 
+
+shown) is ~9%R. 
+
+ 
+
+Fig. 11. Mars Science Helicopter forward flight performance. 
+
+The structure of the optimized blade was constructed using the CAD system CATIA, and analyzed using the 
+
+three-dimensional finite element analysis code X3D from University of Maryland (Ref. 23). X3D can calculate the 
+
+stress and strain of the rotating structure under loading, and it can obtain the natural frequencies of vibration. The 
+
+objective of the analysis was to define the internal blade structure, identify the root thickness required to meet the 
+
+structural requirements, and provide updates to the blade and hub weight estimates. 
+
+The structural analysis was conducted for designs reflecting the tip speed and blade loading increases enabled by 
+
+the advanced airfoils: R = 0.64, σ = 0.142, Mtip = 0.8 for the hexacopter; and R = 1.25, σ = 0.122, Mtip = 0.8 for the 
+
+coaxial helicopter. The blades had the double-edged plate airfoil outboard, the diamond airfoils inboard, and the 
+
+optimum twist and taper, Figure 10. Figure 12 shows a typical blade structure and root. Inside the outer skin, there is 
+
+a spar and inside the spar is a foam core. The root insert attaches to the thrust bearing. The materials used were 
+
+MTM45-1 M46J 12K unidirectional carbon fiber  0 deg tape for the spar; carbon fiber 60 gsm HR40 spread tow Bi-
+
+D ±45 deg weave cloth with knocked down E for the skin; Rohacell 31F foam; and 7075 aluminum for the root insert.  
+
+Figure 13 shows the modal frequencies calculated for several cases. The lowest blade frequency is for the 
+
+flap mode. The dashed lines are constant per-rev values. Figure 14 illustrates the stress analysis results for the blade 
+
+under centrifugal force loading.  
+
+This analysis was performed prior to the controls analysis specific to MSH, thus the bandwidth criterion was 
+
+based on Ingenuity: 275 rad/sec. The regressive flap mode frequency must be greater than 275 rad/sec for the coaxial 
+
+-0.05
+
+0.00
+
+0.05
+
+0.10
+
+0.15
+
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0r/R
+
+coaxial helicopter blade
+
+-0.10
+
+0.00
+
+0.10
+
+0.20
+
+0.0 0.2 0.4 0.6 0.8 1.0r/R
+
+hexacopter blade
+
+0
+
+500
+
+1000
+
+1500
+
+2000
+
+2500
+
+0 10 20 30 40 50
+
+p
+o
+
+w
+e
+
+r 
+(W
+
+)
+
+speed (m/sec)
+
+coaxial hexacopter
+
+0
+
+500
+
+1000
+
+1500
+
+2000
+
+2500
+
+0 10 20 30 40 50
+
+p
+o
+
+w
+e
+
+r 
+(W
+
+)
+
+speed (m/sec)
+
+total induced profile ind+pro parasite
+
+
+
+12 
+
+ 
+
+helicopter with cyclic control. For design rotor speed of 1425 rpm, the coaxial blade would need a flap frequency of 
+
+2.8/rev. The coning mode frequency must be greater than 275 rad/sec for the hexacopter with thrust control (collective 
+
+pitch or rpm). For design rotor speed of 2782 rpm, the hexacopter blade would need a flap frequency greater than 
+
+1/rev. The preliminary structural analysis (described above) was conducted for a flap frequency requirement of 1.5/rev. 
+
+The following cases were analyzed: 
+
+i) The hexacopter blade, designed for the flap frequency = 1.5/rev at normal rotor speed, 2782 rpm. The blade thickness 
+
+was increased to 25% at the root (9%R), and to 14% at 25%R to achieve this frequency. The resulting blade weight 
+
+was 78.1 g (skin 22.6, spar 45.2, foam 2.1, and root insert 8.2 g) and the hub weight was 36 g (torque tube, thrust 
+
+bearing, roller bearings, and screw). The skin had seven layers of cloth at the root and 12 layers of cloth outboard of 
+
+50%R (after the foam and spar end). The spar had four layers of unidirectional carbon fiber at the root and a ply drop-
+
+off of one layer throughout the spar ending with the spar at 50%R. Figure 13a shows the modal frequencies. The flap 
+
+frequency is 1.512/rev at the design rotation speed 2782 rpm. The flap frequency is achieved by making the inboard 
+
+part of the blade stiff, so there is an effective flap hinge at about 48.75%R. Figure 14 illustrates the stress analysis 
+
+results, for the blade under centrifugal force loading. 
+
+ii) The hexacopter blade designed for target blade weight of 52.5 g. The resulting blade flap frequency was 1.2/rev. 
+
+The blade thickness was maintained at 8% at the root (9%R) and at 25%R. The resulting blade weight was 50.4 g 
+
+(skin 22.22, spar 22.5, foam 0.76, and root insert 4.93 g). The skin had seven layers of cloth at the root with a one ply 
+
+drop-off up until 50% span. Outboard of 50%R the skin had twelve layers of cloth. The spar had four layers of 
+
+unidirectional carbon fiber at the root and a ply drop-off of two layers throughout the spar ending with the spar at 
+
+45%R. Figure 13b shows the modal frequencies.  The reduced weight is achieved by making the inboard part of the 
+
+blade thinner, as a result bending starts immediately from 9%R. 
+
+iii) The coaxial helicopter blade, with the same inboard airfoil thickness ratios as for (a). The resulting flap frequency 
+
+was 1.446/rev at 1425 rpm, and the blade weight was 341.4 g (skin 87.4, spar 187.7, foam 16.5, and root insert 49.8 
+
+g). The skin had seven layers of cloth at the root and twelve layers of skin outboard of 50%R. The spar had four layers 
+
+of unidirectional carbon fiber at the root and a ply drop-off of one layer throughout the spar ending with the spar at 
+
+50%R. Figure 13c shows the modal frequencies. The effective flap hinge is at about 48.75%R (same as (a)) but the 
+
+larger size produces a softer blade. 
+
+iv) The coaxial helicopter blade, with the same inboard airfoil thickness ratios as for (b). The resulting flap frequency 
+
+was 1.16 /rev at 1425 rpm, and the blade weight was 237.5 g (skin 93.3, spar 104.2, foam 5.8, and root insert 34.2 g). 
+
+The skin had seven layers of cloth at the root with a one ply drop-off up until 50%R. Outboard of 50%R the skin had 
+
+seventeen layers of cloth. The spar had four layers of unidirectional carbon fiber at the root and a ply drop-off of two 
+
+layers throughout the spar ending with the spar at 45%R. Figure 13d shows the modal frequencies. 
+
+The hexacopter blade can be designed to meet the bandwidth criterion for flight dynamics and control within the 
+
+allocated blade weight. The calculated hub weight is also less than the allocation in the conceptual design. The coaxial 
+
+helicopter configuration would be feasible if sufficient mechanical or structural damping could be introduced for the 
+
+flap motion, and the blade weight could be determined by strength requirements instead of flap frequency placement. 
+
+Preliminary stress analysis indicates that the high stresses occur in the transition region of the structure (as expected), 
+
+but the stresses are still well under material limits. 
+
+ 
+
+Fig. 12. Hexacopter blade internal structure and root. 
+
+Skin Spar
+
+Foam Root insert
+
+Torque tube
+
+Roller bearing
+
+Thrust bearing
+
+Screw
+
+
+
+13 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(a) Hexacopter, target flap frequency 1.5/rev.  (b) Hexacopter, target blade weight 52.5 g. 
+
+ 
+
+(c) Coaxial, same thickness ratio as (a).  (d) Coaxial, same thickness ratio as (b). 
+
+Fig. 13. Calculated blade frequencies. 
+
+ 
+
+Fig. 14. Hexacopter blade and root stress under centrifugal force loading (units: Pa). 
+
+Preliminary Stress Analysis
+
+
+
+14 
+
+ 
+
+VII. Mission Potential 
+
+The potential capabilities of the Mars Science Helicopter were explored by designing for maximum capability at 
+
+a fixed size. The hexacopter with 0.64 m rotor radius was considered, at the Jezero Crater in the spring (0.015 kg/m3, 
+
+–50 deg C). The designs were somewhat more conservative than the baseline: the contingency weight was increased 
+
+to 25%, and the rotor solidity was limited to 0.25. The resulting aircraft had a gross weight of 31.2 kg and power of 
+
+6.2 kW. At this size, the design can trade payload for battery weight (total energy), and trade range for hover time in 
+
+the mission. Note that all the designs carried the equipment and avionics weight of 1.2 kg, had 20% energy reserve 
+
+for the design mission, and the mission started with 0.5 min for takeoff. 
+
+Figure 15 shows the range and hover time capability of hexacopters designed for payloads of 0, 2, 5, and 8 kg. 
+
+The corresponding battery capacity decreased as payload increased, for the same aircraft gross weight. With the 
+
+baseline payload of 2 kg, significant range (8 km) or hover time (15 min) was available for conducting the science 
+
+missions. Figure 16 shows the range and hover time when each aircraft was operated at reduced payload. The reduced 
+
+rotor power required allowed greater range or time. Figure 16 shows the capability of the aircraft designed for 8 kg 
+
+payload, operated either with reduced payload, or swapping payload for batteries. Table 4 summarizes the range and 
+
+hover time capabilities. 
+
+ 
+
+Table 4. Mars Science Helicopter capability; gross weight 31.2 kg, power 6.2 kW. 
+
+Design for Payload = x kg 
+
+Design Payload (kg) Range (km)  Hover Time (min) 
+
+8 3.2 OR 1.5 
+
+5 9.6  4.7 
+
+2 16  7.8 
+
+0 20.4  9.9 
+
+    
+
+Design for Payload = 8 kg, Swap Payload and Batteries 
+
+Operating Payload (kg) Range (km)  Hover Time (min) 
+
+8 3.2 OR 1.5 
+
+5 11.7  5.7 
+
+2 20.3  9.9 
+
+0 25.9  12.7 
+
+ 
+
+
+
+15 
+
+ 
+
+ 
+
+Fig. 15. Range and hover time capability of hexacopter designed for various payloads;  
+
+gross weight 31.2 kg, power 6.2 kW. 
+
+ 
+
+Fig. 16. Range and hover time capability of hexacopter designed for various payloads,  
+
+operated at reduced payload. 
+
+The design features that enable the performance and mission capability of the Mars Science Helicopter could also 
+
+be applied to an aircraft the same size as Ingenuity: advanced airfoils, higher tip speed, more blade area, higher flight 
+
+speed, larger motor, and larger battery — all enabling a useful science payload. This, at first, was done as a means to 
+
+quantify the effect of the design changes. However, this exercise, ultimately, resulted in the development of another 
+
+design concept called the Advanced Mars Helicopter (AMH).  Ingenuity is a coaxial helicopter with blade radius of 
+
+0.605 m. Table 5 compares Ingenuity with the AMH. The key design parameters have been shown in blue, and the 
+
+red numbers highlight the mission capability. This exercise showed that if the designs discussed above were 
+
+implemented to a rotorcraft of the same rotor radius/size as Ingenuity, that a significant science payload could be 
+
+added to future missions (recall that Ingenuity has only the camera required for navigation). Figure 17 shows the range 
+
+and hover time possible with a range of payloads. Withrow, et al. (Ref. 33) provides further detail about this design.  
+
+ 
+
+
+
+16 
+
+ 
+
+ 
+
+Fig. 17. Range and hover time of Advanced Mars Helicopter. 
+
+ 
+
+Table 5. Advanced Mars Helicopter design summary. 
+
+  MH Advanced Design 
+
+ 
+
+ 
+
+                                                                         
+
+design 𝐶𝑇/𝜎  0.10 0.115 
+
+design Mtip  0.7 0.8 
+
+cruise speed m/sec 2 30 
+
+advancing tip Mat  0.71 0.93 
+
+payload kg 0 1.3 
+
+range km 0.18 OR 2 AND 
+
+hover time min 1.5 2 
+
+rotor radius m 0.605 0.605 
+
+gross weight kg 1.8 4.6 
+
+number rotors  2 2 
+
+disk loading kg/m2 0.8 2 
+
+solidity  0.148 0.248 
+
+tip speed m/sec 163 186 
+
+rotor speed rpm 2575 2943 
+
+total power kW 0.36 0.88 
+
+solar cell m2 0.04 0.06 
+
+battery Ah 12 46 
+
+ 
+
+VIII. Current Status and Next Steps  
+
+At the time of writing, year two of a three year JPL independent research and development (IRAD) effort to define 
+
+the possibilities of second generation Mars rotorcraft is coming to an end. Year three will be used to narrow down the 
+
+
+
+17 
+
+ 
+
+vehicle selection, most likely between the large Hexacopter and smaller, AMH designs, for a mission proposal. At 
+
+JPL this includes tasks such as demonstrating guidance, navigation, and autonomy algorithms, and selecting a science 
+
+mission. At Ames, tasks will focus around on-going controls analysis and further structural analysis of the hexacopter 
+
+design to improve weight models and better inform vehicle selection. Additionally, members of the Ames team were 
+
+recently awarded two additional years of funding from NASA headquarters to fabricate and test the optimized rotor 
+
+designs described above in the Ames Aeolian Wind Tunnel to validate models and obtain more data at low Re and 
+
+high Mach conditions.   
+
+IX. Conclusion 
+
+The design and performance of a second generation Mars rotorcraft (Mars Science Helicopter) have been 
+
+explored. The intent of this exercise was to explore the vehicle limits and develop conceptual rotorcraft capable of 
+
+conducting science investigations independently of a lander or rover. Coaxial helicopter and hexacopter configurations 
+
+were considered, initially with a payload of 2 kg and aircraft mass around 20 kg, but it was determined the vehicles 
+
+were capable of carrying a larger payload if desired. Initial estimates of weight and performance were based on the 
+
+capabilities of Ingenuity. Rotorcraft designs for Mars are constrained by the dimensions of the aeroshell for the trip to 
+
+the planet, so packaging options were explored. Aerodynamic performance optimization was conducted, particularly 
+
+through airfoils designed specifically for the low Reynolds number and high Mach number inherent in operation on 
+
+Mars. Rotor structural designs were developed that met blade frequency and weight targets, subject to material stress 
+
+limits. Designs show that it is feasible for rotorcraft to contribute to science operations on Mars: a 31 kg hexacopter 
+
+that fits within a 2.5 m diameter aeroshell could carry a 5 kg payload for 10 min of hover time or over a range of 5 
+
+km. Results of this study applied to the current Ingenuity form factor could enable a 1.3 kg science payload. Next 
+
+steps include validating models and choosing the next Mars mission which will dictate whether the larger hexacopter 
+
+or smaller coaxial vehicle is the right choice for the next Mars mission.  
+
+Acknowledgments 
+
+The authors would like to acknowledge all Ames, JPL, and University Maryland team members and leadership 
+
+who have contributed to and supported this study. Partners at the University of Maryland significantly contributed to 
+
+the rotor design through the structural analysis described in the section “Rotor Design” led by Professor Anubhav 
+
+Datta. The authors would like to thank Natalia Perez-Perez for contributing the plot for Figure 17. These efforts would 
+
+be much less complete without the hard work of the Ames Aeromechanics interns: Mireille Fehler, Malorie Travis, 
+
+Siobhan Whittle, Cuyler Dull, Asa Palmer, Allysa Tuano, Athena Chan, and Sara Mayne.  
+
+References 
+
+1) Balaram, J.; Daubar, I.J.; Bapst, J.; and Tzanetos, T. “Helicopters on Mars: Compelling Science of Extreme Terrains 
+
+Enabled by an Aerial Platform.” Ninth International Conference on Mars, Pasadena, CA, July 2019. 
+
+2) Balaram, J.B.; Canham, T.; Duncan, C.; Golombek, M.; Grip, H.F.; Johnson, W.; Maki, J.; Quon, A.; Stern, R.; and 
+
+Zhu, D. “Mars Helicopter Technology Demonstrator.” AIAA Paper No. 2018-0023, January 2018. 
+
+3) Johnson, W., Withrow-Maser, S. Young, L., Malpica, C., Koning, W., Kuang, W., Fehler, M. Tuano, A., Chan, A., 
+
+Datta, A. Cheng, C., Lumba, R., Escobar, E., Balaram, J., Tzanetos, T., Grip, H.F., “Mars Science Helicopter 
+
+Conceptual Design.” NASA TM 2020-220485, March 2020. 
+
+4) Young, L.A. “Vertical Lift — Not Just for Terrestrial Flight.” American Helicopter Society International Powered 
+
+Lift Conference, Crystal City, VA, October 2000. 
+
+5) Young, L.A., and Aiken, E.W. “Vertical Lift Planetary Aerial Vehicles: Three Planetary Bodies and Four 
+
+Conceptual Design Cases.” Twenty-Seventh European Rotorcraft Forum, Moscow, Russia, September 2001. 
+
+6) Young, L.A.; Aiken, E.W.; Derby, M.R.; Demblewski, R.; and Navarrete, J. “Experimental Investigation and 
+
+Demonstration of Rotary-Wing Technologies for Flight in the Atmosphere of Mars.” American Helicopter Society 
+
+58th Annual Forum, Montreal, Canada, June 2002. 
+
+7) Young, L.A.; Aiken, E.W.; Gulick, V.; Mancinelli, R.; and Briggs, G.A. “Rotorcraft as Mars Scouts.” IEEE 
+
+Aerospace Conference, Paper No. 10.1109, March 2002. 
+
+
+
+18 
+
+ 
+
+8) Datta, A.; Roget, B.; Griffiths, D.; Pugliese, G.; Sitaraman, J.; Bao, J.; Liu, L.; and Gamard, O. “Design of a Martian 
+
+Autonomous Rotary-Wing Vehicle.” Journal of Aircraft, Volume 40, Number 3 (May-June 2003). 
+
+9) O’Brien, P.C. “Using a Robotic Helicopter to Fuel Interest in and Augment the Human Exploration of the Planet 
+
+Mars”, AIAA Paper No. 2003-6275, September 2003. 
+
+10) Lacerda, M.; Park, D.; Patel, S.; and Schrage, D. “A Preliminary Systems Engineering Study on a Concept for 
+
+Mars Exploration with an Unmanned Autonomous Vehicle and Ground Rover Configuration.” American Helicopter 
+
+Society 74th Annual Forum, Phoenix, AZ, May 2018. 
+
+11) Boelhouwer, R.N.J.; Bunschoten, E.C.; Debusscher, C.M.J.; Frijters, W.; van Goeverden, R.J.; Legrand, E.B.; 
+
+Matton, J.; Paliusis, K.; and Verheyen, J.K.N. “Design Report, Martian Advanced Reconnaissance System.” Delft 
+
+University of Technology, June 2018. 
+
+12) Fujita, K.; Karaca, H.; and Nagai, H. “Parametric Study of Mars Helicopter for Pit Crater Exploration.” AIAA 
+
+Paper No. 2020-1734, January 2020. 
+
+13) Grip, H.F.; Johnson, W.; Malpica, C.; Scharf, D.P.; Mandic, M.; Young, L.; Allan, B.; Mettler, B.; San Martin, 
+
+M.; and Lam, J. “Modeling and Identification of Hover Flight Dynamics for NASA’s Mars Helicopter.” Journal of 
+
+Guidance, Control, and Dynamics, Volume 43, Number 2 (February 2020). 
+
+14) Grip, H.F.; Scharf, D.P.; Malpica, C.; Johnson, W.; Singh, G.; and Young, L. “Guidance and Control for a Mars 
+
+Helicopter.” AIAA Paper No. 2018-1849, January 2018. 
+
+15) Grip, H.F.; Lam, J.N.; Bayard, D.; Conway, D.T.; Singh, G.; Brockers, R.; Delaune, J.; Matthies, L.; Malpica, C.; 
+
+Brown, T.; Jain, A.; San Martin, M.; and Merewether, G. “Flight Control System for NASA's Mars Helicopter.” AIAA 
+
+Paper No. 2019-1289, January 2019. 
+
+16) Pipenberg, B.T.; Keennon, M.T.; Tyler, J.D.; Langberg, S.A.; Hibbs, B.; Balaram, J.B.; Grip, H.F.; and Pempejian, 
+
+J. “Design and Fabrication of the Mars Helicopter Rotor, Airframe, and Landing Gear Systems.” AIAA Paper No. 
+
+2019-0620, January 2019. 
+
+17) Pipenberg, B.T.; Keennon, M.T.; Langberg, S.A.; and Tyler, J.D. “Development of the Mars Helicopter Rotor 
+
+System.” American Helicopter Society 75th Annual Forum, Philadelphia, PA, May 2019. 
+
+18) Koning, W.J.F.; Johnson, W.; and Grip, H.F. “Improved Mars Helicopter Aerodynamic Rotor Model for 
+
+Comprehensive Analyses.” AIAA Journal, Volume 57, Number 9 (September 2019). 
+
+19) Johnson, W. “NDARC. NASA Design and Analysis of Rotorcraft.” NASA TP 2015-218751, April 2015. 
+
+20) Johnson, W., “Technology Drivers in the Development of CAMRAD II,” American Helicopter Society 
+
+Aeromechanics Specialist Meeting, San Francisco, California, January 1994. 
+
+21) Johnson, W. “Rotorcraft Aeromechanics Applications of a Comprehensive Analysis.” HeliJapan 1998: AHS 
+
+International Meeting on Rotorcraft Technology and Disaster Relief, Gifu, Japan, April 1998. 
+
+22) Johnson, W. “Rotorcraft Aerodynamic Models for a Comprehensive Analysis.” American Helicopter Society 54th 
+
+Annual Forum, Washington, D.C., May 1998. 
+
+23) Datta, A. “X3D — A 3D Solid Finite Element Multibody Dynamic Analysis for Rotorcraft.” American Helicopter 
+
+Society Specialists' Conference on Aeromechanics Design for Vertical Lift, San Francisco, CA, January 2016. 
+
+24) Pulliam, T., “High Order Accurate Finite-Difference Methods: As Seen in OVERFLOW.” AIAA Paper Number 
+
+2011-3851, June 2011. 
+
+25) Lawrence, B., Theodore, C.R., and Johnson, W., T. Berger, T., “A Handling Qualities Analysis Tool for Rotorcraft 
+
+Conceptual Designs,” The Aeronautical Journal, June, 2018, Volume 122 No. 1252 960, pp 960–987. 
+
+26) Johnson, W. “Rotorcraft Aeromechanics,” New York: Cambridge University Press, 2013. 
+
+27) Koning, W.J.F. “Airfoil Selection for Mars Rotor Applications.” NASA CR 2019-220236, July 2019. 
+
+28) Koning, W.J.F.; Romander, E.A.; and Johnson, W. “Low Reynolds Number Airfoil Evaluation for the Mars 
+
+Helicopter Rotor.” American Helicopter Society 74th Annual Forum, Phoenix, AZ, May 2018. 
+
+29) Hoerner, S. F., “Fluid-Dynamic Drag.” Midland Park, NJ: Hoerner Fluid Dynamics, 1965. 
+
+
+
+19 
+
+ 
+
+30) McMasters, J., and Henderson, M., “Low-Speed Single-Element Airfoil Synthesis.” Technical Soaring, Volume 
+
+6, Number 2 (1980). 
+
+31) Koning, W.J.F., Romander, E., Johnson, W., "Performance Optimization of Plate Airfoils for Martian Rotor 
+
+Applications Using a Genetic Algorithm," 45th European Rotorcraft Forum, Warsaw, Poland, September, 2019. 
+
+32) Koning, W.J.F., Romander, E.A., Johnson, W., "Optimization of Low Reynolds Number Airfoils for Martian 
+
+Rotor Applications Using an Evolutionary Algorithm" AIAA Science and Technology Forum and Exposition (AIAA 
+
+SciTech), Orlando, Florida, USA, January 6–10, 2020. 
+
+33) Withrow-Maser, S., Johnson, W., Young, L., Cummings, H., Chan, A., Balaram, J., Tzanetos, T., “An Advanced 
+
+Mars Helicopter Design.”  AIAA ASCEND Conference, Virtual, November 2020.  
+
+ 
+
+ 
+
+ 
+
+ 
+
+

@@ -1,0 +1,491 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+M2020 Overview Aug 2022 for ENG Dept rev2
+
+
+National Aeronautics and
+Space Administration
+
+1
+
+George Tahu
+Mars 2020 Program Executive
+
+Mars Exploration Program
+
+ISU SSP 2022
+
+National Aeronautics and
+Space Administration Mars 2020 Perseverance
+
+& Mars Sample Return
+
+
+
+Dingo Gap, from Curiosity
+
+Mars Today: A Cold Desert
+
+
+
+Modern Mars Mars ~ 3.6 billion years ago (?)
+
+Ancient Mars: Surface Liquid Water
+
+
+
+MARS EXPLORATION PROGRAM GOALS
+
+
+
+
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only
+
+A priority since 1980 and of three National Academy Decadal Surveys
+A first-step “round-trip” in advance of humans to Mars
+
+The oldest known life on Earth existed ~3.5 billion years ago,
+a time when Mars was habitable. Today, 
+
+<<1% of the Earth’s surface is 3 billion years or older
+>50% of the Mars’ surface is 3 billion years or older
+
+The first billion years and life’s beginning in the Solar System:
+The record is on Mars
+
+GOAL —
+First Sample Return From Another Planet
+
+6
+
+
+
+What Should We Look For?
+
+7
+
+Classic Earth Fossils: 
+Less than  
+
+~ 650 million years old
+
+vs
+
+Microbial Biosignatures: 
+up to 3.6 billion years old
+(Australian stromatolite)
+
+
+
+SAMPLING SYSTEM
+Collects samples for future return Earth
+
+
+
+
+
+Mars 2020 / Perseverance - Atlas V Launch
+July 30, 2020
+
+
+
+Phoenix
+
+Viking 1
+
+Pathfinder
+
+Viking 2
+
+Curiosity
+
+Spirit
+
+Opportunity
+
+Jezero Crater
+
+Mars 2020 Landing Site
+
+
+
+1 km JEZERO CRATER
+
+
+
+Jezero crater
+
+Phoenix / InSight
+80.8 mi x 16.8 mi
+130 km x 27 km
+
+Curiosity
+15.5 mi x 12.4 mi
+25 km x 20 km
+
+Mars Pathfinder
+124.3 mi x 43.5 mi
+200 km x 70 km
+
+Perseverance
+4.8 mi x 4.1 mi
+7.7 km x 6.6 km
+
+Image Credit: NASA/JPL/MSSS/ESA/DLR/FU-Berlin/J. Cowart, CC BY-SA 3.0 IGO
+
+
+
+14
+
+Entry, Descent, and Landing
+with Terrain Relative Navigation
+
+
+
+15
+
+Map: Stack et al. 2020/M2020 
+Science Team 
+
+
+
+16
+
+
+
+
+
+Core Drilling on “Rochette”
+
+18
+
+
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only 19
+
+Octavia E. Butler Landing Site
+
+Three Forks
+
+Crater Floor   Science Campaign Area
+
+v Perseverance set single-sol 
+record 319.786m (Sol 351 )
+
+v 29 successful flights & over 1 year 
+of ops for Ingenuity!
+
+Mars2020Perseverance Odometer: 12101.7 meters*
+Ingenuity Log: 29 flights, 7088 m, 3321.5 sec*
+*July 27, 2022, Sol 510
+
+v Power of AutoNav Perseverance set multi-sol plan 
+record distance 528.673 m (Sol 404-405 )
+
+NASA’s Perseverance rover at Hogwallow Flats on June 
+10, 2022, the 464th Martian day, or sol, of the mission. 
+Credit: NASA/JPL-Caltech/USGS/UofA (PH)
+
+
+
+Mars Sample Return 
+(Formulation/Phase A)
+
+Samples Collected by Perseverance
+
+20
+
+Perseverance has arrived at the delta front.  
+Has 12 rock samples collected.
+
+Total 15 tubes sealed:
+2 Witness blanks 
+1 Atmospheric sample
+6 pairs of rock core samples
+
+An initial 30-day report is prepared for each 
+sample that will provide contextual 
+information on the returned samples.
+
+Sampling Sites
+
+Landing site characterization for the first 
+depot at “Three Forks” are underway.
+
+Science Community Workshop for depot of 
+the first sample set is being planned for last 
+week in September 2022
+
+20
+
+
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only
+
+Mars Sample Return:
+Potential benefits from samples already cached
+
+• Igneous rocks will provide absolute age of the Jezero crater 
+region and anchor the ages of Martian epochs
+
+• Salts and other products of aqueous alteration will 
+provide insights into the history of water in this region on 
+Mars
+
+• Organic compounds already detected in some samples –
+will be able to determine the specific compound(s) and 
+potentially deduce their origin (biogenic vs abiogenic)
+
+• The samples will help address major gaps in our knowledge 
+for future human exploration
+
+
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only 22
+
+NASA/ESA MSR Campaign
+
+• The MSR Campaign spans flight elements and one ground element
+• The MSR Program manages development and operations of Sample Retrieval and Earth Return and interfaces to 
+
+Sample Caching and Sample Receiving; program concludes upon safe return at the landing site
+• The MEP Program manages M2020 Phase E operations and is the home of the future Sample Receiving Project
+
+Sample Caching
+• Collect samples of rock 
+
+and sediment
+
+• Cache samples on the 
+surface for retrieval
+
+Sample Receiving
+• Transport contained 
+
+samples to receiving 
+facility
+
+• Safety assessment and 
+sample containment
+
+• Initial sample science and 
+curation
+
+Earth Return 
+• Capture and contain 
+
+samples in Mars orbit
+
+• Safely return samples 
+to Earth for recovery at 
+landing site
+
+Sample Retrieval
+• Retrieve samples 
+
+cached by Mars 2020 
+rover
+
+• Launch samples into 
+orbit around Mars
+
+1 2 3 4
+Mars Sample Return Program
+
+Long-term 
+Curation & 
+
+Science 
+Investigations
+
+NASA/ESA
+
+
+
+Mars Sample Return 
+(Formulation/Phase A)
+
+MSR Campaign Architecture
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only
+
+This presentation contains pre-decisional information for planning and discussion purposes only.
+
+
+
+Mars Sample Return 
+(Formulation/Phase A)
+
+Vertically Ejected Controlled Tip-Off Release 
+(VECTOR)
+
+• VECTOR is a pre-
+ignition separation 
+mechanism for the 
+Mars Ascent System 
+(MAS)
+
+• VECTOR provides a 
+MAS separation 
+state with a vertical 
+velocity and pitch 
+rate
+
+• MAS ignition occurs 
+a set time after 
+separation within an 
+established window 
+that allows for 
+successful flyaway
+
+24
+
+
+
+Mars Sample Return 
+(Formulation/Phase A)
+
+Earth Entry Vehicle 
+Manufacturing Demonstration Unit #1
+
+Drop Altitude:  ~1000 ft
+
+Terminal Velocity at impact:  ~33 m/s / ~74 mph
+Utah Test and Training Range – March 1, 2022
+
+25
+NASA / USAF Team Photo
+
+
+
+MSR Overview
+
+Summary
+
+• This is the most significant planetary science undertaking in a generation
+
+• Now is the time!
+• Perseverance on surface of Mars collecting samples
+• Orbital Relay assets in place around Mars
+
+• MSR is made possible by strong and significant partnerships with 
+European colleagues at ESA and their industrial consortiums
+
+
+
+Pre-Decisional Information—For Planning and Discussion Purposes Only
+
+Join Us!
+mars.nasa.gov/msr
+
+@NASAPersevere | @NASAMars
+
+
+
+Join Us!
+
+mars.nasa.gov/people
+mars.nasa.gov/mars2020
+
+@NASAPersevere | @NASAMars
+
+
+
+Backup
+
+
+
+30
+
+LAUNCH
+• Atlas V 541 vehicle
+• Launched July 30, 2020
+
+CRUISE/APPROACH
+• ~7 month cruise
+• Arrived Feb 18, 2021
+
+SURFACE MISSION
+• Curiosity-class Rover
+• 20 km traverse distance capability
+• Qualified to 1.5 Martian year lifetime
+
+ENTRY, DESCENT & LANDING
+• Curiosity-based EDL system: guided 
+
+entry and powered descent/Sky Crane
+• Access to landing sites ±30° latitude,   
+
+≤ -0.5 km elevation
+
+
+
+
+
+
+
+First image ever of a spacecraft landing on another planet
+
+
+
+34
+
+Rover first driving test at Jet Propulsion Laboratory
+
+
+
+Rover and ”Skycrane” Separation Test
+
+Spacecraft Thermal Vacuum Test
+
+
+
+
+
+Mars helicopter “Ingenuity”
+
+
+
+M2020 Communication Links
+
+Mars 2020 requires substantially more data downlink volume than MSL. 
+Planning use of both MRO and MAVEN for relay.
+
+

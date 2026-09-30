@@ -1,4 +1,4 @@
-from pipelines.equipment_pipeline import (
+from data.pipelines.equipment_pipeline import (
     EquipmentPipeline,
 )
 

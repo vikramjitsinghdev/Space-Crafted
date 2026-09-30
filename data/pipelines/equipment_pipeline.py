@@ -1,70 +1,70 @@
 from pathlib import Path
 
-from collectors.ntrs import NTRSClient
+from data.collectors.ntrs import NTRSClient
 
-from collectors.ntrs_parser import (
+from data.collectors.ntrs_parser import (
     extract_results,
     extract_citation_id,
     extract_title,
 )
 
-from collectors.document_ranker import (
+from data.collectors.document_ranker import (
     rank_documents,
     deduplicate_documents,
 )
 
-from collectors.download_parser import (
+from data.collectors.download_parser import (
     find_downloads,
     choose_best_download,
 )
 
-from collectors.document_downloader import (
+from data.collectors.document_downloader import (
     DocumentDownloader,
 )
 
-from extraction.pdf_processor import (
+from data.extraction.pdf_processor import (
     extract_pages,
 )
 
-from extraction.passage_extractor import (
+from data.extraction.passage_extractor import (
     extract_passages,
 )
 
-from extraction.structured import (
+from data.extraction.structured import (
     extract_structured,
 )
 
-from extraction.ollama import (
+from data.extraction.ollama import (
     extract_with_ollama,
 )
 
-from extraction.document_classifier import (
+from data.extraction.document_classifier import (
     is_simulation_useful,
 )
 
-from extraction.equipment_identity import (
+from data.extraction.equipment_identity import (
     title_matches_equipment,
 )
 
-from extraction.evidence_scorer import (
+from data.extraction.evidence_scorer import (
     score_evidence,
 )
 
-from processing.calculations import (
+from data.processing.calculations import (
     calculate_all,
 )
 
-from processing.validator import (
+from data.processing.validator import (
     validate_equipment_data,
 )
 
-from models.equipment import (
+from data.models.equipment import (
     Equipment,
     Source,
     Provenance,
 )
 
-from storage.json_store import (
+from data.storage.json_store import (
     save_equipment,
 )
 
@@ -89,7 +89,7 @@ class EquipmentPipeline:
             f"{equipment_name}"
         )
 
-        from collectors.query_builder import (
+        from data.collectors.query_builder import (
             build_equipment_queries,
         )
 

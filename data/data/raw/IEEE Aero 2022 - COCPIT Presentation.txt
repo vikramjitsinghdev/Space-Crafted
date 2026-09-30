@@ -1,0 +1,447 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COCPIT IEEE
+
+
+COCPIT:
+Collaborative Activity Planning Software 
+for Mars Perseverance Rover
+
+Ivy Deliz
+NASA Ames Research Center
+ASRC Federal
+
+Andrea Connell
+Jet Propulsion Laboratory
+California Institute of Technology
+
+Jessica Marquez
+NASA Ames Research Center
+
+Bob Kanefsky
+NASA Ames Research Center
+
+San Jose State University Research Foundation
+
+Chet Joswig
+Jet Propulsion Laboratory
+
+California Institute of Technology
+
+© 2022 California Institute of Technology. Government sponsorship acknowledged.
+
+
+
+INTRODUCTION
+
+ARCHITECTURE
+
+PLANNING PHASES
+
+USER INTERFACE
+
+COLLABORATION
+
+PROGRAMMATIC INTERFACES
+
+RESOURCE MODELING
+
+TEMPORAL CONSTRAINT NETWORK
+
+AUTONOMOUS SCHEDULING
+
+SEQUENCING
+
+SUMMARY
+
+COCPIT:
+Collaborative Activity 
+Planning Software for Mars 
+Perseverance Rover
+
+IEEE Aerospace Conference
+Big Sky, MT 2022 
+
+
+
+Introduction
+
+● Perseverance Rover landed on Mars 
+February 2021
+
+● Surface operations team members are 
+distributed between North America and 
+Europe
+
+● COCPIT is part of the Mars 2020 
+Ground Data Systems 
+
+Pyrzak, G; Puncel, R; Vona, M; Lopez-Roig, R. “The Mars 2020 Ground Data System 
+Architecture”, in IEEE Conference on Aerospace, Big Sky, MT 2022. 
+
+
+
+COCPIT
+
+Responsible for
+
+● Activity planning
+● Continuously verifying 
+
+constraints
+● Document Science Intent
+● Model data and power resources
+● APIs to interface with GDS tools
+● Target association
+
+Component-based Campaign Planning, 
+Implementation and Tactical
+
+
+
+Architecture
+Dev Stack
+
+● Frontend
+○ JavaScript, HTML, CSS, Backbone.js, d3, 
+
+svg, Web Sockets
+● Backend
+
+○ Node.js, nginx
+● Database
+
+○ Redis for temporary storage
+● Infrastructure
+
+○ Docker, AWS, XML for permanent 
+storage in S3, Single Sign-On 
+Authentication Layer, Elastic Search
+
+Collaborative web-application
+
+Extends and customizes the 
+Playbook planning and execution 
+tool developed at NASA Ames 
+Research Center
+
+Marquez, J.J., Hillenius, S., Deliz, I., Kanefsky, B., Zheng, J., and Reagan, M., 
+“Increasing Crew Autonomy for Long Duration Exploration Missions: 
+
+Self-Scheduling” in IEEE Aerospace Conference, 2017
+
+
+
+Planning Phases
+COCPIT supports all planning phases
+
+1. Parcel Development
+○ Define and validate reusable Activities
+
+2. Strategic Planning
+○ Create plan fragment templates 
+○ Consider timing constraints
+○ Asses heating requirements and resources
+
+3. Campaign Implementation
+○ Look-Ahead Plan for the next ~5 Sols
+○ Includes communication passes
+○ Ensure progression of science goals
+○ Evaluate options, guide tactical planning
+
+4. Tactical Uplink
+○ Plan next sol(s) to be executed by the rover
+○ Incorporate changes based on received data 
+
+(i.e. status and latest images)
+○ Ensure constraints are met
+○ Generate sequences to send to rover
+
+5. Tactical Downlink
+○ View currently executing plan
+○ Receive and analyze data 
+
+
+
+Navigator
+● Companion application
+● Management of plans, component 
+
+libraries and folders
+● Supports planning workflows
+
+○ Bookmarking
+○ Plan level operations
+○ Color tagging
+
+● Query search for metadata and archival 
+information
+
+
+
+Component Library
+● Collection of reusable components with 
+
+resource information (energy, data, 
+duration)
+
+● Planning units for Campaign 
+Implementation and Tactical Planning 
+phases
+
+
+
+Timeline
+● Main view to 
+
+manipulate and 
+review the plan
+
+● Hierarchical and 
+chronological order
+
+● Row labels have 
+shortcuts to 
+important 
+information
+
+● Vertical Overlays 
+show comm passes 
+and when rover is 
+asleep
+
+● Blue dash lines 
+show handovers
+
+● Time window 
+constraint 
+representation
+
+
+
+Plan Structure ● Planning Unit Types○ Components contain Activity Groups
+○ Activity Groups contain Activities
+○ Activities are of many different Types
+
+● Components are plan fragments that can 
+be added to and removed from plan
+
+● Timeline shows Activity Groups and 
+Activities as children (not Components)
+
+● During planning, Activity Groups can be 
+grouped into Merge Sets (back rectangle 
+with diamond corners)
+
+
+
+Overview
+● Alternate view 
+
+showing Components, 
+Activity Groups and 
+Activity hierarchy
+
+● Column per Sol
+● Shows Planning Units 
+
+outside of the bounds 
+of execution
+
+● Per-Sol Data and 
+Power Resources
+
+
+
+Details Panel
+● Selection-aware panel for editing
+● Each planning unit type shows the 
+
+relevant sections, operations and 
+parameters for its type
+
+● Respect permissions by role and type of 
+planning unit
+
+● Multiselect shows metrics and 
+supported operations for selection
+
+● Same details panel available in all 
+COCPIT views 
+
+
+
+Data Modeling
+● COCPIT models data generated, 
+
+reprioritized, retransmitted and 
+downlinked by rover
+
+● Activity parameters contribute to the 
+calculation of data (using formulas in 
+AD)
+
+● Crucial to understand when the data 
+will be available for analysis Earth
+○ Decisional Data is data needed for next 
+
+tactical planning cycle
+● Activities show data contributions
+● Data Resource Panel shows aggregated 
+
+values per criticality at the  plan-level 
+and a specific time in the plan
+
+
+
+Collaboration & 
+Interfaces
+
+Collaboration
+
+● Team Members around the world can 
+access the live plan with a web browser
+○ Changes are distributed to all clients 
+
+automatically to keep them up to date
+● Role-based permissions control actions
+
+Interfaces
+
+● COCPIT’s Application Programming 
+Interfaces (APIs) allow other tools to 
+submit changes programmatically
+
+● A pub/sub service sends notifications to 
+tools that are interested in receiving plan 
+changes
+
+● Plan Patch allows Rover Planners to 
+optimize rover motions by adding, 
+removing and reordering activities with a 
+bulk change operation
+
+
+
+Temporal 
+Constraint 
+Network
+
+Constraint Types
+
+● Pin to start at a specific time
+● Execution Window 
+
+○ Earliest Start, Latest End, 
+Preferred Start
+
+● Dependency
+○ Start before or after another 
+
+planning unit
+
+COCPIT uses a Temporal Constraint 
+Network to evaluate the set of 
+constraints in the plan and warns 
+users if they are inconsistent or 
+circular. 
+
+
+
+Autonomous 
+Scheduling
+
+Planning vs. Scheduling
+
+● COCPIT users are responsible for planning: 
+selecting desired activities, setting parameters 
+and constraints
+
+● An autonomous scheduler determines actual 
+start times for each planning unit
+
+Scheduling Considerations
+
+● Predicted duration
+● Timing and dependency constraints
+● Data volume and power limits
+● Mechanical state requirements and effects
+● Allowable parallelism
+
+On the ground and on-board
+
+● Ground software Copilot is heavily integrated 
+with COCPIT
+
+● Perseverance flight software will also support 
+autonomous scheduling
+
+● Both are informed by data in the COCPIT plan
+
+
+
+Sequencing ● After plan is finalized, it is used to generate the sequences  that run on the rover. 
+● Individual activities are converted to 
+
+sequences. Activity parameters determine 
+which commands and arguments are 
+generated.
+
+● The structure of the plan is used to build 
+master and submaster sequences that 
+coordinate the flow of execution of other 
+sequences.
+○ Timing constraints map to commands to 
+
+pause until a given time.
+○ Merge Sets and Groups map to submaster 
+
+sequences.
+○ Wake and Sleep activities map to commands 
+
+instructing the spacecraft when to wake up 
+and shut down.
+
+
+
+Summary As missions become more complex, tools must 
+allow more integration, automation and 
+collaboration to enable less work hours for 
+operators and more science on Mars.
+
+COCPIT and Playbook are modern planning and 
+scheduling tools paving the way for software 
+supporting humans and robotic exploration of 
+Moon, Mars and beyond. 
+
+Thank you to the COCPIT management, design, test, 
+infrastructure, and development team for working 
+tirelessly to make this software successful. Anthony 
+Robertson, Ryan Goetz, Kathryn Yu, Roxana Gonzalez 
+Burgos, Joshua Camacho, Jimin Zheng, Sara Schnadt, 
+Adrian Galvin, Basak Alper Ramaswamy, Guy Pyrzak, 
+Hoan Luu, Natalie Rezek, Jon Blossom and Usha Guduri.
+
+

@@ -1,0 +1,219 @@
+{
+    "copyright": {
+        "thirdPartyPermissionsProduced": false,
+        "disclosedToPublic": false,
+        "containsIndication": false,
+        "publisherPermissionOrRightsToDistribute": false,
+        "belongsToUsGov": false,
+        "determinationType": "MAY_INCLUDE_COPYRIGHT_MATERIAL",
+        "thirdPartyContentCondition": "NOT_SET",
+        "belongsToContractor": false,
+        "disclosedInvention": false,
+        "licenseType": "NO",
+        "submissionId": 20240000509,
+        "containsThirdPartyMaterial": false,
+        "belongsToPublisher": false,
+        "id": "e726f01717054832befe2a63cf81d931",
+        "belongsToAuthors": false
+    },
+    "subjectCategories": [
+        "Lunar and Planetary Science and Exploration"
+    ],
+    "keywords": [
+        "Mars 2020",
+        "Geological Mapping",
+        "Perseverance",
+        "Ingenuity"
+    ],
+    "exportControl": {
+        "isExportControl": "NO",
+        "submissionId": 20240000509,
+        "ear": "NO",
+        "id": "6e265ef904a44126873000bcc5c285df",
+        "itar": "NO"
+    },
+    "distributionDate": "2024-03-11T05:00:00.0000000+00:00",
+    "fundingNumbers": [
+        {
+            "number": "203959",
+            "submissionId": 20240000509,
+            "id": "9ccb79d274b340c993add5f5a9ad4a5d",
+            "type": "WBS"
+        },
+        {
+            "number": "J-090007",
+            "submissionId": 20240000509,
+            "id": "ed3396be5f8945eba57ad5d534263a7c",
+            "type": "CONTRACT_GRANT"
+        },
+        {
+            "number": "80NM0018D0004",
+            "submissionId": 20240000509,
+            "id": "6b8d4f7191ce4bf3a60d11b757aff4bd",
+            "type": "CONTRACT_GRANT"
+        },
+        {
+            "number": "J-090011",
+            "submissionId": 20240000509,
+            "id": "63e03ce1cd5849819b444b904d693f2d",
+            "type": "CONTRACT_GRANT"
+        }
+    ],
+    "title": "Field Geologic Mapping of Sample Sites From the Ground and the Air With Perseverance Rover and Ingenuity Helicopter",
+    "stiType": "CONFERENCE_PAPER",
+    "distribution": "PUBLIC",
+    "submittedDate": "2024-01-11T22:29:09.6894820+00:00",
+    "authorAffiliations": [
+        {
+            "organizationId": "97f8aba2dedf548b9b77f8d0200301ae",
+            "sequence": 0,
+            "submissionId": 20240000509,
+            "meta": {
+                "author": {
+                    "name": "L S Crumpler"
+                },
+                "organization": {
+                    "name": "New Mexico Museum of Natural History and Science",
+                    "location": "Albuquerque, New Mexico, United States"
+                }
+            },
+            "id": "1ceca2d33e4c498b81e33ccde8426e40",
+            "userType": "OTHER",
+            "userId": "103cf9562eb141afb2c6f57cb20f1b4f"
+        },
+        {
+            "organizationId": "f93929fef1eb5d9bb0bc1f566ba28e6f",
+            "sequence": 1,
+            "submissionId": 20240000509,
+            "meta": {
+                "author": {
+                    "orcidId": "",
+                    "name": "Nathan R Williams"
+                },
+                "organization": {
+                    "name": "Jet Propulsion Laboratory",
+                    "location": "La Ca\u00f1ada Flintridge, United States"
+                }
+            },
+            "id": "a3ccae8a5114458d85e5e0e61bf76870",
+            "userType": "CONTRACTOR_GRANTEE",
+            "userId": "22ccd3f4e7e84fceb9f986412b634c5d"
+        },
+        {
+            "organizationId": "4c6a2b878d76521da887cdcb2564bf90",
+            "sequence": 2,
+            "submissionId": 20240000509,
+            "meta": {
+                "author": {
+                    "orcidId": "",
+                    "name": "J I Simon"
+                },
+                "organization": {
+                    "name": "Johnson Space Center",
+                    "location": "Houston, United States"
+                }
+            },
+            "id": "b7b291f59ae2492c8b61c9c538db3a00",
+            "userType": "CIVIL",
+            "userId": "95e121d33e06407e86aeb4d8a77bcbab"
+        },
+        {
+            "organizationId": "f93929fef1eb5d9bb0bc1f566ba28e6f",
+            "sequence": 3,
+            "submissionId": 20240000509,
+            "meta": {
+                "author": {
+                    "orcidId": "",
+                    "name": "F J Calef III"
+                },
+                "organization": {
+                    "name": "Jet Propulsion Laboratory",
+                    "location": "La Ca\u00f1ada Flintridge, United States"
+                }
+            },
+            "id": "6fe7212b1b64429fbe075e042a425b84",
+            "userType": "CONTRACTOR_GRANTEE",
+            "userId": "77b7ed26464e40f7a92b25d5737914ba"
+        },
+        {
+            "organizationId": "011360a1fd825c119ba58bb7b0a4f5af",
+            "sequence": 4,
+            "submissionId": 20240000509,
+            "meta": {
+                "author": {
+                    "orcidId": "",
+                    "name": "G Caravaca"
+                },
+                "organization": {
+                    "name": "Institut de Recherche en Informatique et Syst\u00e8mes Al\u00e9atoires",
+                    "location": "Rennes, France"
+                }
+            },
+            "id": "6bbbb311241b4cae92ebf74d963d71ed",
+            "userType": "OTHER",
+            "userId": "193926b19c394301bf18ba75de68d3ed"
+        }
+    ],
+    "stiTypeDetails": "Conference Paper",
+    "technicalReviewType": "NASA_PEER_COMMITTEE",
+    "modified": "2025-08-31T18:39:21.7150190+00:00",
+    "id": 20240000509,
+    "created": "2024-01-11T22:24:15.8391970+00:00",
+    "center": {
+        "code": "JSC",
+        "name": "Johnson Space Center",
+        "id": "dd46994b91a94cb2a2722617cbbadc55"
+    },
+    "onlyAbstract": true,
+    "sensitiveInformation": 2,
+    "abstract": "One of the primary mission goals for Perseverance is to determine the geologic context of sample sites. Rover-based (in situ) or field geologic context mapping (GXM) based on Perseverance rover and Ingenuity helicopter observations provides a nearly continuous record of geologic context and exposed surface structure over a 120 m-wide corridor along the traverse of Perseverance and the flight path of Ingenuity. Field geologic mapping along the traverse and flight path and outcrop-scale mapping at sample sites provides a spatial dimension to ground truth geologic, stratigraphic, and modern environmental context for samples at scales relevant to sample interpretation. Here we provide an abbreviated overview of field mapping as it relates to documenting the architecture of the Jezero fan and geologic context of several examples of sample locations.",
+    "isLessonsLearned": false,
+    "disseminated": "DOCUMENT_AND_METADATA",
+    "cui": {
+        "isCui": false,
+        "submissionId": 20240000509,
+        "id": "5f029a37b38645e794e5f828caf3ff7f"
+    },
+    "meetings": [
+        {
+            "country": "US",
+            "submissionId": 20240000509,
+            "endDate": "2024-03-15T05:00:00.0000000+00:00",
+            "sponsors": [
+                {
+                    "organizationId": "caba028024835183ac5ceb068aa86384",
+                    "meta": {
+                        "organization": {
+                            "name": "Lunar and Planetary Institute",
+                            "location": "Houston, Texas, United States"
+                        }
+                    },
+                    "meetingId": "fb21b622e57a4f14b613cc9a8a61b570",
+                    "id": "9057b4ab55ce4cafbdf5d28188902040"
+                }
+            ],
+            "name": "55th Lunar and Planetary Science Conference (LPSC)",
+            "location": "Woodlands, TX",
+            "id": "fb21b622e57a4f14b613cc9a8a61b570",
+            "url": "https://www.hou.usra.edu/meetings/lpsc2024/",
+            "startDate": "2024-03-11T05:00:00.0000000+00:00"
+        }
+    ],
+    "status": "CURATED",
+    "related": [],
+    "downloads": [
+        {
+            "draft": false,
+            "mimetype": "application/pdf",
+            "name": "Crumpler_GXM_Fan_LPSC55.pdf",
+            "type": "ABSTRACT",
+            "links": {
+                "original": "/api/citations/20240000509/downloads/Crumpler_GXM_Fan_LPSC55.pdf",
+                "pdf": "/api/citations/20240000509/downloads/Crumpler_GXM_Fan_LPSC55.pdf",
+                "fulltext": "/api/citations/20240000509/downloads/Crumpler_GXM_Fan_LPSC55.pdf.txt"
+            }
+        }
+    ],
+    "downloadsAvailable": false,
+    "index": "submissions-2026-09-24-04-13"
+}
