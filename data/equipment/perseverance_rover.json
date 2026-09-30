@@ -1,25 +1,96 @@
 {
-    "name": "Perseverance rover",
-    "description": null,
-    "mission": null,
+    "name": "Perseverance Rover",
+    "description": "Curiosity-class Rover",
+    "mission": "Mars 2020",
     "manufacturer": null,
+    "category": "Rover",
     "subsystem": null,
-    "category": "unknown",
     "mass_kg": null,
     "length_m": null,
     "width_m": null,
     "height_m": null,
     "diameter_m": null,
-    "volume_m3": null,
-    "footprint_m2": null,
     "power_w": null,
     "voltage_v": null,
     "operating_temperature_min_c": null,
     "operating_temperature_max_c": null,
     "materials": [],
-    "specifications": {},
-    "sources": [],
-    "extraction_methods": [],
-    "ai_extracted": false,
+    "specifications": {
+        "traverse_distance_capability_km": 20,
+        "qualified_lifetime_martian_years": 1.5
+    },
+    "calculated": {},
+    "sources": [
+        {
+            "title": "Mars 2020 Perseverance & Mars Sample Return",
+            "url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "source_type": "NASA_NTRS",
+            "page": null,
+            "citation_id": "20220011452"
+        }
+    ],
+    "provenance": {
+        "description": {
+            "value": "Curiosity-class Rover",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": "Surface Mission bullet lists \"Curiosity-class Rover\"."
+        },
+        "mission": {
+            "value": "Mars 2020",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": "The text mentions \"Mars 2020\" in context of data downlink requirements."
+        },
+        "category": {
+            "value": "Rover",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": "Surface Mission bullet lists \"Curiosity-class Rover\", indicating rover category."
+        },
+        "materials": {
+            "value": [],
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": null
+        },
+        "specifications": {
+            "value": {
+                "traverse_distance_capability_km": 20,
+                "qualified_lifetime_martian_years": 1.5
+            },
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": null
+        },
+        "name": {
+            "value": "Perseverance Rover",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars 2020 Perseverance & Mars Sample Return",
+            "source_url": "https://ntrs.nasa.gov/api/citations/20220011452/downloads/M2020%20Overview%20Aug%202022%20for%20ENG%20Dept%20rev2%20-%20reduced%20copy.pdf.txt",
+            "page": null,
+            "evidence": "The document repeatedly references \"Perseverance\" as the rover."
+        }
+    },
+    "extraction_methods": [
+        "ollama_semantic_extraction"
+    ],
+    "ai_extracted": true,
     "confidence": null
 }

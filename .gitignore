@@ -2,3 +2,9 @@
 __pycache__/
 .venv
 data/raw/
+Idea.txt
+
+# Ignore Test files
+test_document_retrieval.py
+test_pdf_extraction.py
+test_ntrs_downloads.py

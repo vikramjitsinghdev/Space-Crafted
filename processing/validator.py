@@ -1,52 +1,44 @@
-def validate_equipment(
-    equipment
-):
-
+def validate_equipment_data(data):
     warnings = []
 
-    if (
-        equipment.mass_kg is not None
-        and equipment.mass_kg < 0
-    ):
+    positive_fields = [
+        "mass_kg",
+        "length_m",
+        "width_m",
+        "height_m",
+        "diameter_m",
+        "power_w",
+        "voltage_v",
+    ]
 
-        warnings.append(
-            "Mass cannot be negative."
-        )
+    for field in positive_fields:
 
-    if (
-        equipment.power_w is not None
-        and equipment.power_w < 0
-    ):
+        value = data.get(field)
 
-        warnings.append(
-            "Power cannot be negative."
-        )
+        if value is None:
+            continue
 
-    if (
-        equipment.length_m is not None
-        and equipment.length_m <= 0
-    ):
+        if value < 0:
+            warnings.append(
+                f"{field} cannot be negative."
+            )
 
-        warnings.append(
-            "Length must be positive."
-        )
+    temperature_min = data.get(
+        "operating_temperature_min_c"
+    )
 
-    if (
-        equipment.width_m is not None
-        and equipment.width_m <= 0
-    ):
-
-        warnings.append(
-            "Width must be positive."
-        )
+    temperature_max = data.get(
+        "operating_temperature_max_c"
+    )
 
     if (
-        equipment.height_m is not None
-        and equipment.height_m <= 0
+        temperature_min is not None
+        and temperature_max is not None
+        and temperature_min > temperature_max
     ):
-
         warnings.append(
-            "Height must be positive."
+            "Minimum operating temperature "
+            "is greater than maximum."
         )
 
     return warnings

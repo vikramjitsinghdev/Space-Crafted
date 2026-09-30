@@ -1,0 +1,100 @@
+{
+    "name": "COCPIT",
+    "description": "Collaborative web-application for activity planning, constraint verification, resource modeling, and sequencing for the Perseverance Rover.",
+    "mission": "Mars 2020 (Perseverance Rover)",
+    "manufacturer": null,
+    "category": "software",
+    "subsystem": null,
+    "mass_kg": null,
+    "length_m": null,
+    "width_m": null,
+    "height_m": null,
+    "diameter_m": null,
+    "power_w": null,
+    "voltage_v": null,
+    "operating_temperature_min_c": null,
+    "operating_temperature_max_c": null,
+    "materials": [],
+    "specifications": {
+        "frontend_technologies": "JavaScript, HTML, CSS, Backbone.js, d3, svg, Web Sockets",
+        "backend_technologies": "Node.js, nginx",
+        "database": "Redis for temporary storage",
+        "infrastructure": "Docker, AWS, XML for permanent storage in S3, Single Sign-On Authentication Layer, Elastic Search"
+    },
+    "calculated": {},
+    "sources": [
+        {
+            "title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "url": null,
+            "source_type": "NASA_NTRS",
+            "page": null,
+            "citation_id": "20220003012"
+        }
+    ],
+    "provenance": {
+        "name": {
+            "value": "COCPIT",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover"
+        },
+        "description": {
+            "value": "Collaborative web-application for activity planning, constraint verification, resource modeling, and sequencing for the Perseverance Rover.",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": "Collaborative web-application for activity planning, constraint verification, resource modeling, and sequencing for the Perseverance Rover."
+        },
+        "mission": {
+            "value": "Mars 2020 (Perseverance Rover)",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": "Perseverance Rover landed on Mars February 2021; COCPIT is part of the Mars 2020 Ground Data Systems."
+        },
+        "category": {
+            "value": "software",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": "Collaborative web-application"
+        },
+        "materials": {
+            "value": [],
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": null
+        },
+        "specifications": {
+            "value": {
+                "frontend_technologies": "JavaScript, HTML, CSS, Backbone.js, d3, svg, Web Sockets",
+                "backend_technologies": "Node.js, nginx",
+                "database": "Redis for temporary storage",
+                "infrastructure": "Docker, AWS, XML for permanent storage in S3, Single Sign-On Authentication Layer, Elastic Search"
+            },
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "COCPIT: Collaborative Activity Planning Software for Mars Perseverance Rover",
+            "source_url": null,
+            "page": null,
+            "evidence": null
+        }
+    },
+    "extraction_methods": [
+        "ollama_semantic_extraction"
+    ],
+    "ai_extracted": true,
+    "confidence": null
+}

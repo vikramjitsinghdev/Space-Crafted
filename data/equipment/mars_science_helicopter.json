@@ -1,0 +1,162 @@
+{
+    "name": "Mars Science Helicopter",
+    "description": "A second‑generation Mars rotorcraft with the capability of conducting science investigations independently of a lander or rover.",
+    "mission": "Mapping, stratigraphy and remote sensing operations on Mars with a 2.02 kg payload (take‑off, climb to 200 m, 1 km cruise, 2 min hover, land and recharge).",
+    "manufacturer": "NASA Jet Propulsion Laboratory and NASA Ames Research Center",
+    "category": "Rotorcraft",
+    "subsystem": null,
+    "mass_kg": 1.8,
+    "length_m": null,
+    "width_m": null,
+    "height_m": null,
+    "diameter_m": 2.5,
+    "power_w": 2870,
+    "voltage_v": null,
+    "operating_temperature_min_c": -50,
+    "operating_temperature_max_c": null,
+    "materials": [
+        "MTM45-1 M46J 12K unidirectional carbon fiber (spar)",
+        "Carbon fiber 60 gsm HR40 spread‑tow Bi‑D ±45° weave cloth (skin)",
+        "Rohacell 31F foam",
+        "7075 aluminum (root insert)"
+    ],
+    "specifications": {
+        "rotor_radius_m_coaxial": 1.25,
+        "rotor_radius_m_hexacopter": 0.64,
+        "solidity_layered_A": 0.25,
+        "payload_kg": 2.02,
+        "gross_weight_kg": 20,
+        "power_kW_layered_B": 2.87
+    },
+    "calculated": {
+        "daily_energy_kwh": 68.88
+    },
+    "sources": [
+        {
+            "title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "url": null,
+            "source_type": "NASA_NTRS",
+            "page": null,
+            "citation_id": "20205008552"
+        }
+    ],
+    "provenance": {
+        "name": {
+            "value": "Mars Science Helicopter",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft"
+        },
+        "description": {
+            "value": "A second‑generation Mars rotorcraft with the capability of conducting science investigations independently of a lander or rover.",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "a second‑generation Mars rotorcraft with the capability of conducting science investigations independently of a lander or rover"
+        },
+        "mission": {
+            "value": "Mapping, stratigraphy and remote sensing operations on Mars with a 2.02 kg payload (take‑off, climb to 200 m, 1 km cruise, 2 min hover, land and recharge).",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "JPL‑defined mission for mapping, stratigraphy, and remote sensing operations with a payload of 2.02 kg"
+        },
+        "manufacturer": {
+            "value": "NASA Jet Propulsion Laboratory and NASA Ames Research Center",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "NASA’s Jet Propulsion Laboratory and NASA Ames Research Center are exploring possibilities for a Mars Science Helicopter"
+        },
+        "category": {
+            "value": "Rotorcraft",
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "rotorcraft"
+        },
+        "mass_kg": {
+            "value": 1.8,
+            "unit": null,
+            "provenance_type": "NASA_DOCUMENT",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "overall vehicle mass of approximately twenty kilograms"
+        },
+        "diameter_m": {
+            "value": 2.5,
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "rotor diameter of 2.5–2.7 m for the coaxial helicopter"
+        },
+        "power_w": {
+            "value": 2870,
+            "unit": null,
+            "provenance_type": "NASA_DOCUMENT",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "Power (kW) 2.87 (Table 1 for the hexacopter Layered B design)"
+        },
+        "operating_temperature_min_c": {
+            "value": -50,
+            "unit": null,
+            "provenance_type": "NASA_DOCUMENT",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "temperature of –50 °C (typical atmospheric conditions at Jezero Crater)"
+        },
+        "materials": {
+            "value": [
+                "MTM45-1 M46J 12K unidirectional carbon fiber (spar)",
+                "Carbon fiber 60 gsm HR40 spread‑tow Bi‑D ±45° weave cloth (skin)",
+                "Rohacell 31F foam",
+                "7075 aluminum (root insert)"
+            ],
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": "MTM45-1 M46J 12K unidirectional carbon fiber 0 deg tape for the spar; carbon fiber 60 gsm HR40 spread tow Bi‑D ±45 deg weave cloth for the skin; Rohacell 31F foam; and 7075 aluminum for the root insert"
+        },
+        "specifications": {
+            "value": {
+                "rotor_radius_m_coaxial": 1.25,
+                "rotor_radius_m_hexacopter": 0.64,
+                "solidity_layered_A": 0.25,
+                "payload_kg": 2.02,
+                "gross_weight_kg": 20,
+                "power_kW_layered_B": 2.87
+            },
+            "unit": null,
+            "provenance_type": "AI_EXTRACTED",
+            "source_title": "Mars Science Helicopter: Conceptual Design of the Next Generation of Mars Rotorcraft",
+            "source_url": null,
+            "page": null,
+            "evidence": null
+        }
+    },
+    "extraction_methods": [
+        "ollama_semantic_extraction",
+        "deterministic_extraction"
+    ],
+    "ai_extracted": true,
+    "confidence": null
+}

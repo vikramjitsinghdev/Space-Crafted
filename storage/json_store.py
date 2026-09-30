@@ -1,40 +1,50 @@
 import json
 import os
+import re
+
+
+def safe_filename(name: str):
+    name = name.lower()
+
+    name = re.sub(
+        r"[^a-z0-9_-]+",
+        "_",
+        name,
+    )
+
+    return name.strip("_")
 
 
 def save_equipment(
     equipment,
-    directory="data/equipment"
+    directory="data/equipment",
 ):
-
     os.makedirs(
         directory,
-        exist_ok=True
+        exist_ok=True,
     )
 
     filename = (
-        equipment.name
-        .lower()
-        .replace(" ", "_")
-        .replace("/", "_")
-        .replace("\\", "_")
+        safe_filename(equipment.name)
+        + ".json"
     )
 
     path = os.path.join(
         directory,
-        filename + ".json"
+        filename,
     )
 
     with open(
         path,
         "w",
-        encoding="utf-8"
-    ) as f:
+        encoding="utf-8",
+    ) as file:
 
         json.dump(
             equipment.to_dict(),
-            f,
-            indent=4
+            file,
+            indent=4,
+            ensure_ascii=False,
         )
 
     return path
