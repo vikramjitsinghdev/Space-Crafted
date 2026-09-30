@@ -1,24 +1,28 @@
 import json
 import os
 
-from config import DATA_DIR
 
+def save_equipment(
+    equipment,
+    directory="data/equipment"
+):
 
-def save_equipment(equipment):
-
-    os.makedirs(DATA_DIR, exist_ok=True)
+    os.makedirs(
+        directory,
+        exist_ok=True
+    )
 
     filename = (
         equipment.name
         .lower()
         .replace(" ", "_")
         .replace("/", "_")
-        + ".json"
+        .replace("\\", "_")
     )
 
     path = os.path.join(
-        DATA_DIR,
-        filename
+        directory,
+        filename + ".json"
     )
 
     with open(

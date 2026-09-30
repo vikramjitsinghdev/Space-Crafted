@@ -1,177 +1,172 @@
-import json
+from models.equipment import (
+    Equipment,
+    Source
+)
 
-from nasa_client import NASAClient
-from ntrs_client import NTRSClient
+from collectors.nasa_api import (
+    NASAClient
+)
 
-from models import Equipment
-from equipment_parser import calculate_volume
-from storage import save_equipment
+from collectors.ntrs import (
+    NTRSClient
+)
+
+from extraction.structured import (
+    extract_mass,
+    extract_power,
+    extract_length
+)
+
+from extraction.ollama import (
+    extract_with_ollama
+)
+
+from processing.calculations import (
+    calculate_volume,
+    calculate_footprint,
+    calculate_daily_energy
+)
+
+from processing.validator import (
+    validate_equipment
+)
+
+from storage.json_store import (
+    save_equipment
+)
 
 
-def print_equipment(equipment):
+def merge_ai_data(
+    equipment,
+    data
+):
 
-    print("\n")
-    print("=" * 60)
-    print("NASA EQUIPMENT")
-    print("=" * 60)
+    for field in [
+        "description",
+        "mass_kg",
+        "length_m",
+        "width_m",
+        "height_m",
+        "diameter_m",
+        "power_w",
+        "voltage_v",
+        "operating_temperature_min_c",
+        "operating_temperature_max_c",
+        "manufacturer",
+        "mission"
+    ]:
 
-    data = equipment.to_dict()
+        value = data.get(field)
 
-    for key, value in data.items():
+        if (
+            getattr(equipment, field)
+            is None
+            and value is not None
+        ):
 
-        if value is not None:
-            print(
-                f"{key:40}: {value}"
+            setattr(
+                equipment,
+                field,
+                value
             )
 
-    print("=" * 60)
+    materials = data.get(
+        "materials"
+    )
+
+    if materials:
+        equipment.materials = materials
+
+    specs = data.get(
+        "specifications"
+    )
+
+    if specs:
+        equipment.specifications.update(
+            specs
+        )
+
+    equipment.ai_extracted = True
+
+    if "ollama" not in equipment.extraction_methods:
+
+        equipment.extraction_methods.append(
+            "ollama"
+        )
 
 
-def search_nasa_equipment(name):
+from collectors.ntrs import NTRSClient
+from collectors.ntrs_parser import (
+    extract_results,
+    extract_citation_id,
+    extract_title
+)
 
-    nasa = NASAClient()
+
+def test_ntrs_retrieval(
+    equipment_name
+):
+
     ntrs = NTRSClient()
 
-    print(f"\nSearching NASA for: {name}")
-
-    # --------------------------------------------------
-    # 1. Search NASA imagery
-    # --------------------------------------------------
-
-    print("\n[1] NASA Image Library")
-
-    try:
-
-        image_results = nasa.search_images(
-            name,
-            page_size=5
-        )
-
-        items = (
-            image_results
-            .get("collection", {})
-            .get("items", [])
-        )
-
-        print(
-            f"Found {len(items)} NASA image results."
-        )
-
-        for item in items:
-
-            data = item.get("data", [])
-
-            if not data:
-                continue
-
-            metadata = data[0]
-
-            print(
-                "\n -",
-                metadata.get("title")
-            )
-
-    except Exception as e:
-
-        print(
-            "NASA image search failed:",
-            e
-        )
-
-    # --------------------------------------------------
-    # 2. Search NASA Technical Reports
-    # --------------------------------------------------
-
-    print("\n[2] NASA Technical Reports Server")
-
-    try:
-
-        results = ntrs.search(
-            name
-        )
-
-        print(
-            "NTRS search completed."
-        )
-
-        # The exact response structure can vary,
-        # so keep the raw response available.
-
-        with open(
-            "ntrs_raw.json",
-            "w",
-            encoding="utf-8"
-        ) as f:
-
-            json.dump(
-                results,
-                f,
-                indent=4
-            )
-
-    except Exception as e:
-
-        print(
-            "NTRS search failed:",
-            e
-        )
-
-    # --------------------------------------------------
-    # 3. Create initial equipment object
-    # --------------------------------------------------
-
-    equipment = Equipment(
-        name=name
+    print(
+        "\nSearching NTRS..."
     )
 
-    # --------------------------------------------------
-    # 4. Calculate values that can be calculated
-    # --------------------------------------------------
-
-    equipment = calculate_volume(
-        equipment
+    search_results = ntrs.search(
+        equipment_name,
+        size=10
     )
 
-    return equipment
+    results = extract_results(
+        search_results
+    )
+
+    print(
+        f"\nFound {len(results)} results."
+    )
+
+    for index, result in enumerate(
+        results
+    ):
+
+        citation_id = extract_citation_id(
+            result
+        )
+
+        title = extract_title(
+            result
+        )
+
+        print(
+            f"\n[{index + 1}]"
+        )
+
+        print(
+            "Title:",
+            title
+        )
+
+        print(
+            "Citation ID:",
+            citation_id
+        )
+
+    return results
 
 
 def main():
 
     print(
-        "NASA EQUIPMENT DATA COLLECTOR"
-    )
-
-    print(
-        "Enter the NASA equipment/tool/instrument "
-        "you want to investigate."
+        "SPACECRAFTED NASA RETRIEVAL TEST"
     )
 
     name = input(
         "\nEquipment: "
     ).strip()
 
-    if not name:
-
-        print(
-            "No equipment specified."
-        )
-
-        return
-
-    equipment = search_nasa_equipment(
+    test_ntrs_retrieval(
         name
-    )
-
-    print_equipment(
-        equipment
-    )
-
-    path = save_equipment(
-        equipment
-    )
-
-    print(
-        f"\nSaved to: {path}"
     )
 
 
